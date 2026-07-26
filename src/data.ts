@@ -307,15 +307,16 @@ export interface Certification {
   title: string;
   issuer: string;
   year?: string;
+  featured?: boolean;
 }
 
 export const certificationsData: Certification[] = [
-  { title: '65 Hours Community Service Certificate', issuer: 'PGGA', year: '2026' },
-  { title: 'AWS Cloud Core Team Badge', issuer: 'AWS Student Builder Group (CUST)', year: '2026' },
-  { title: "Chancellor's Honorship Certificate", issuer: 'Capital University of Science and Technology', year: 'Spring 2025' },
-  { title: 'Volunteering Head Certificate', issuer: 'CAUSE Society (CUST)' },
-  { title: 'Deloitte Australia Technology Job Simulation', issuer: 'Forage' },
-  { title: 'CodeAlpha C++ Programming Internship Certificate', issuer: 'CodeAlpha' },
+  { title: "Chancellor's Honorship Certificate", issuer: 'Capital University of Science and Technology', year: 'Spring 2025', featured: true },
+  { title: 'AWS Cloud Core Team Badge', issuer: 'AWS Student Builder Group (CUST)', year: '2026', featured: true },
+  { title: 'Deloitte Australia Technology Job Simulation', issuer: 'Forage', featured: true },
+  { title: 'CodeAlpha C++ Programming Internship Certificate', issuer: 'CodeAlpha', featured: true },
+  { title: 'Volunteering Head Certificate', issuer: 'CAUSE Society (CUST)', featured: true },
+  { title: '65 Hours Community Service Certificate', issuer: 'PGGA', year: '2026', featured: true },
   { title: "Chancellor's Honorship Certificate", issuer: 'Capital University of Science and Technology', year: 'Fall 2024' },
   { title: 'Business Analysis and Project Management', issuer: 'Coursera' },
   { title: 'Web Development with WordPress', issuer: 'Coursera' },
@@ -323,6 +324,8 @@ export const certificationsData: Certification[] = [
   { title: 'Physics Project Exhibition Certificate', issuer: 'Punjab College' },
   { title: 'Proctorship Certificate', issuer: 'Punjab College' },
 ];
+
+export const featuredCertifications = certificationsData.filter((c) => c.featured);
 
 export const achievementsData = [
   { label: 'CGPA', value: '3.95 / 4.00' },
