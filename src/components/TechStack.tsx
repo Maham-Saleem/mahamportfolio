@@ -1,34 +1,14 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Code2, Palette, Server, Database, GitBranch } from 'lucide-react';
+import { Code2, Database, Terminal, Wrench } from 'lucide-react';
+import { techData } from '../data';
 
-const techData = [
-  {
-    category: 'Programming Languages',
-    icon: Code2,
-    skills: ['JavaScript', 'TypeScript', 'Python', 'Java', 'C++', 'SQL'],
-  },
-  {
-    category: 'Frontend',
-    icon: Palette,
-    skills: ['React.js', 'Next.js', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap'],
-  },
-  {
-    category: 'Backend',
-    icon: Server,
-    skills: ['Node.js', 'Express.js', 'Django', 'REST APIs', 'GraphQL'],
-  },
-  {
-    category: 'Databases',
-    icon: Database,
-    skills: ['MongoDB', 'MySQL', 'PostgreSQL', 'Firebase'],
-  },
-  {
-    category: 'Tools & Platforms',
-    icon: GitBranch,
-    skills: ['Git', 'GitHub', 'Docker', 'VS Code', 'Postman', 'Figma'],
-  },
-];
+const categoryIcons: Record<string, React.ElementType> = {
+  'Frontend Development': Code2,
+  'Backend & Database': Database,
+  'Programming Languages': Terminal,
+  'Development Tools': Wrench,
+};
 
 export default function TechStack() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -49,33 +29,44 @@ export default function TechStack() {
           </h2>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-16">
-          {techData.map((category, i) => (
-            <motion.div
-              key={category.category}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4, delay: 0.2 + i * 0.08 }}
-              className="p-6 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-lg transition-all duration-300"
-            >
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center">
-                  <category.icon size={18} className="text-white" />
+        <div className="grid sm:grid-cols-2 gap-6 mt-16">
+          {techData.map((category, i) => {
+            const CatIcon = categoryIcons[category.category] || Code2;
+            return (
+              <motion.div
+                key={category.category}
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.15 + i * 0.1 }}
+                className="p-6 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-9 h-9 rounded-xl gradient-bg flex items-center justify-center">
+                    <CatIcon size={16} className="text-white" />
+                  </div>
+                  <h3 className="text-sm font-semibold">{category.category}</h3>
                 </div>
-                <h3 className="font-semibold text-sm">{category.category}</h3>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1.5 text-xs font-medium rounded-lg bg-primary/5 text-primary border border-primary/8"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                  {category.items.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                      <div
+                        key={item.name}
+                        className="flex items-center gap-2 p-2.5 rounded-xl bg-primary/3 hover:bg-primary/8 border border-transparent hover:border-primary/15 transition-all duration-200"
+                      >
+                        <span className="text-[15px] shrink-0">
+                          <Icon />
+                        </span>
+                        <span className="text-xs font-medium text-text-secondary truncate">
+                          {item.name}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
