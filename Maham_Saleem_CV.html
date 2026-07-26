@@ -9,8 +9,8 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: 'Inter', -apple-system, sans-serif;
-  font-size: 10px;
-  line-height: 1.5;
+  font-size: 9.5px;
+  line-height: 1.45;
   color: #1a1a2e;
   background: #fff;
   -webkit-font-smoothing: antialiased;
@@ -18,94 +18,92 @@ body {
 .page {
   width: 210mm;
   min-height: 297mm;
-  padding: 20mm 18mm;
+  padding: 16mm 16mm;
   margin: 0 auto;
   background: #fff;
 }
 
-h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; color: #111; }
+h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; color: #111; }
 h1 span { color: #6C63FF; }
-.title { font-size: 12px; color: #6C63FF; font-weight: 500; margin-top: 3px; letter-spacing: 0.3px; }
+.title { font-size: 11px; color: #6C63FF; font-weight: 500; margin-top: 2px; letter-spacing: 0.3px; }
 .contact-row {
-  display: flex; flex-wrap: wrap; gap: 4px 18px;
-  margin-top: 10px; font-size: 9px; color: #555; line-height: 1.6;
+  display: flex; flex-wrap: wrap; gap: 2px 14px;
+  margin-top: 8px; font-size: 8.5px; color: #555;
 }
 .contact-row a { color: #555; text-decoration: none; }
-.contact-row a:hover { color: #6C63FF; }
 
-hr.divider { border: none; border-top: 2px solid #6C63FF; margin: 14px 0 12px 0; }
+hr.divider { border: none; border-top: 2px solid #6C63FF; margin: 10px 0 8px 0; }
 
-.cols { display: flex; gap: 24px; }
-.col-left { width: 160px; flex-shrink: 0; }
+.cols { display: flex; gap: 18px; }
+.col-left { width: 155px; flex-shrink: 0; }
 .col-right { flex: 1; min-width: 0; }
 
 .section-title {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   color: #6C63FF;
-  margin-bottom: 8px;
-  padding-bottom: 4px;
-  border-bottom: 1.5px solid #e8e8f0;
+  margin-bottom: 5px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #e8e8f0;
 }
 
-.summary-text { font-size: 10px; line-height: 1.6; color: #333; margin-bottom: 14px; }
+.summary-text { font-size: 9px; line-height: 1.5; color: #333; margin-bottom: 8px; }
 
 /* Skills */
-.skills-group { margin-bottom: 10px; }
+.skills-group { margin-bottom: 6px; }
 .skills-group:last-child { margin-bottom: 0; }
-.skills-row { font-size: 9px; color: #444; line-height: 1.7; }
+.skills-row { font-size: 8px; color: #444; line-height: 1.55; }
 .skills-cat { font-weight: 600; color: #111; }
 
 /* Education */
-.edu-item { margin-bottom: 10px; }
+.edu-item { margin-bottom: 6px; }
 .edu-item:last-child { margin-bottom: 0; }
-.edu-school { font-size: 10px; font-weight: 700; color: #111; }
-.edu-degree { font-size: 9px; color: #555; }
-.edu-detail { font-size: 9px; color: #444; margin-top: 1px; }
+.edu-school { font-size: 8.5px; font-weight: 700; color: #111; }
+.edu-degree { font-size: 8px; color: #555; }
+.edu-detail { font-size: 8px; color: #444; }
 .edu-detail span { font-weight: 600; color: #6C63FF; }
-.edu-date { font-size: 8px; color: #999; }
+.edu-date { font-size: 7.5px; color: #999; }
 
 /* Languages */
-.lang-items { font-size: 9px; color: #444; line-height: 1.6; }
+.lang-text { font-size: 8.5px; color: #444; }
 
 /* Selected Projects */
-.project { margin-bottom: 14px; }
+.project { margin-bottom: 8px; }
 .project:last-child { margin-bottom: 0; }
-.project-name { font-size: 11px; font-weight: 700; color: #111; margin-bottom: 2px; }
-.project-bullets { font-size: 9.5px; color: #444; line-height: 1.55; padding-left: 14px; margin-bottom: 3px; }
-.project-bullets li { margin-bottom: 1px; }
-.project-tags { font-size: 8.5px; color: #6C63FF; margin-bottom: 2px; }
-.project-links { font-size: 8.5px; }
+.project-name { font-size: 10px; font-weight: 700; color: #111; }
+.project-tags { font-size: 7.5px; color: #6C63FF; margin: 1px 0; }
+.project-bullets { font-size: 8.5px; color: #444; line-height: 1.45; padding-left: 13px; margin-bottom: 1px; }
+.project-bullets li { margin-bottom: 0.5px; }
+.project-links { font-size: 8px; }
 .project-links a { color: #6C63FF; text-decoration: none; font-weight: 500; }
 .project-links a:hover { text-decoration: underline; }
-.project-links .sep { color: #ccc; margin: 0 4px; }
+.project-links .sep { color: #ccc; margin: 0 3px; }
 
 /* Academic Projects */
-.academic-item { font-size: 9.5px; color: #444; margin-bottom: 4px; line-height: 1.5; }
+.academic-item { font-size: 8.5px; color: #444; margin-bottom: 3px; line-height: 1.45; }
 .academic-item strong { color: #111; font-weight: 600; }
-.academic-item a { color: #6C63FF; text-decoration: none; font-size: 8.5px; }
-.academic-item a:hover { text-decoration: underline; }
+.academic-item a { color: #6C63FF; text-decoration: none; font-size: 7.5px; font-weight: 500; }
 
 /* Experience */
-.exp-item { margin-bottom: 10px; }
+.exp-item { margin-bottom: 6px; }
 .exp-item:last-child { margin-bottom: 0; }
 .exp-header { display: flex; align-items: baseline; justify-content: space-between; }
-.exp-left { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
-.exp-role { font-size: 10.5px; font-weight: 700; color: #111; }
-.exp-org { font-size: 10px; color: #6C63FF; font-weight: 500; }
-.exp-date { font-size: 8.5px; color: #999; white-space: nowrap; }
-.exp-desc { font-size: 9px; color: #444; margin-top: 2px; padding-left: 14px; line-height: 1.5; }
-.exp-desc li { margin-bottom: 1px; }
+.exp-left { display: flex; align-items: baseline; gap: 4px; flex-wrap: wrap; }
+.exp-role { font-size: 9.5px; font-weight: 700; color: #111; }
+.exp-org { font-size: 9px; color: #6C63FF; font-weight: 500; }
+.exp-date { font-size: 7.5px; color: #999; white-space: nowrap; }
+.exp-desc { font-size: 8.5px; color: #444; margin-top: 1px; padding-left: 13px; line-height: 1.45; }
+.exp-desc li { margin-bottom: 0.5px; }
 
 /* Certifications */
-.cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 16px; font-size: 9px; color: #444; line-height: 1.7; }
+.cert-item { font-size: 8px; color: #444; line-height: 1.6; }
 
 @media print {
   @page { margin: 0; size: A4; }
   body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .page { padding: 20mm 18mm; width: auto; min-height: auto; }
+  .page { padding: 16mm 16mm; width: auto; min-height: auto; }
 }
 </style>
 </head>
@@ -158,7 +156,7 @@ hr.divider { border: none; border-top: 2px solid #6C63FF; margin: 14px 0 12px 0;
         </div>
       </div>
 
-      <div class="section-title" style="margin-top: 16px;">Education</div>
+      <div class="section-title" style="margin-top: 10px;">Education</div>
 
       <div class="edu-item">
         <div class="edu-school">Capital University of Science &amp; Technology</div>
@@ -168,19 +166,26 @@ hr.divider { border: none; border-top: 2px solid #6C63FF; margin: 14px 0 12px 0;
       </div>
       <div class="edu-item">
         <div class="edu-school">Punjab College</div>
-        <div class="edu-degree">FSc Pre-Engineering</div>
-        <div class="edu-detail"><span>1064</span> / 1200</div>
+        <div class="edu-degree">FSc Pre-Engineering &mdash; <span>1064</span>/1200</div>
         <div class="edu-date">2024</div>
       </div>
       <div class="edu-item">
         <div class="edu-school">Capital Public School</div>
-        <div class="edu-degree">Matriculation</div>
-        <div class="edu-detail"><span>1018</span> / 1100</div>
+        <div class="edu-degree">Matriculation &mdash; <span>1018</span>/1100</div>
         <div class="edu-date">2022</div>
       </div>
 
-      <div class="section-title" style="margin-top: 16px;">Languages</div>
-      <div class="lang-items">English &bull; Urdu</div>
+      <div class="section-title" style="margin-top: 10px;">Languages</div>
+      <div class="lang-text">English &bull; Urdu</div>
+
+      <div class="section-title" style="margin-top: 10px;">Certifications</div>
+      <div class="cert-item">Chancellor's Honorship (Fall 2024)</div>
+      <div class="cert-item">Chancellor's Honorship (Spring 2025)</div>
+      <div class="cert-item">CodeAlpha C++ Internship Certificate</div>
+      <div class="cert-item">Deloitte Australia Tech Job Simulation</div>
+      <div class="cert-item">AWS Cloud Core Team Badge</div>
+      <div class="cert-item">Volunteering Head Certificate</div>
+      <div class="cert-item">65 Hours Community Service Certificate</div>
 
     </div>
 
@@ -189,7 +194,7 @@ hr.divider { border: none; border-top: 2px solid #6C63FF; margin: 14px 0 12px 0;
 
       <div class="section-title">Professional Summary</div>
       <div class="summary-text">
-        Frontend Developer and Software Engineering student at Capital University of Science and Technology (CUST) with a CGPA of 3.95/4.00. Passionate about building modern, responsive, and user-friendly web applications using React, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, and modern frontend technologies. Experienced in developing real-world web projects while continuously expanding software development skills.
+        Frontend Developer and Software Engineering student at CUST with a CGPA of 3.95/4.00. Passionate about building modern, responsive web applications using React, TypeScript, and Tailwind CSS. Experienced in developing real-world projects with modern frontend technologies.
       </div>
 
       <div class="section-title">Selected Projects</div>
@@ -198,8 +203,8 @@ hr.divider { border: none; border-top: 2px solid #6C63FF; margin: 14px 0 12px 0;
         <div class="project-name">Maham Clothing Store</div>
         <div class="project-tags">React &bull; JavaScript &bull; Tailwind CSS &bull; Vite</div>
         <ul class="project-bullets">
-          <li>Developed a responsive fashion e-commerce platform with user authentication, shopping cart, wishlist, and checkout flow.</li>
-          <li>Built with a mobile-first approach ensuring a seamless experience across all devices.</li>
+          <li>Developed a responsive fashion e-commerce platform with authentication, cart, wishlist, and checkout.</li>
+          <li>Built with a mobile-first approach for a seamless experience across all devices.</li>
         </ul>
         <div class="project-links">
           <a href="https://github.com/Maham-Saleem/mahamstore" target="_blank">GitHub</a>
@@ -212,8 +217,8 @@ hr.divider { border: none; border-top: 2px solid #6C63FF; margin: 14px 0 12px 0;
         <div class="project-name">Parima – Community Opportunities Platform</div>
         <div class="project-tags">React &bull; TypeScript &bull; Supabase &bull; PostgreSQL &bull; Tailwind CSS &bull; Vite</div>
         <ul class="project-bullets">
-          <li>Built a community platform connecting users with jobs, volunteering opportunities, and local events.</li>
-          <li>Implemented authentication, role-based access, user profiles, applications, ratings, and real-time updates with Supabase.</li>
+          <li>Built a community platform connecting users with jobs, volunteering, and local events.</li>
+          <li>Implemented authentication, role-based access, profiles, applications, ratings, and real-time updates.</li>
         </ul>
         <div class="project-links">
           <a href="https://github.com/Maham-Saleem/parima" target="_blank">GitHub</a>
@@ -226,7 +231,7 @@ hr.divider { border: none; border-top: 2px solid #6C63FF; margin: 14px 0 12px 0;
         <div class="project-name">Brew &amp; Bean Coffee House</div>
         <div class="project-tags">React &bull; JavaScript &bull; Tailwind CSS &bull; Vite</div>
         <ul class="project-bullets">
-          <li>Designed and developed a modern responsive coffee shop website with interactive menu browsing.</li>
+          <li>Designed a modern responsive coffee shop website with interactive menu browsing.</li>
           <li>Crafted an elegant UI focused on engaging customer experience and smooth navigation.</li>
         </ul>
         <div class="project-links">
@@ -254,22 +259,22 @@ hr.divider { border: none; border-top: 2px solid #6C63FF; margin: 14px 0 12px 0;
 
       <div class="academic-item">
         <strong>Weather Forecasting System</strong> — C++, REST API, JSON
-        &nbsp; <a href="https://github.com/Maham-Saleem/Weather-Forecasting-System" target="_blank">GitHub</a>
+        <a href="https://github.com/Maham-Saleem/Weather-Forecasting-System" target="_blank"> &middot; GitHub</a>
       </div>
       <div class="academic-item">
         <strong>Disaster Evacuation System</strong> — C++, OpenRouteService API, JSON
-        &nbsp; <a href="https://github.com/Maham-Saleem/Disaster-Evacuation-System" target="_blank">GitHub</a>
+        <a href="https://github.com/Maham-Saleem/Disaster-Evacuation-System" target="_blank"> &middot; GitHub</a>
       </div>
       <div class="academic-item">
         <strong>Banking System</strong> — C++, OOP, File Handling
-        &nbsp; <a href="https://github.com/Maham-Saleem/Codealpha_Bankingsystem" target="_blank">GitHub</a>
+        <a href="https://github.com/Maham-Saleem/Codealpha_Bankingsystem" target="_blank"> &middot; GitHub</a>
       </div>
       <div class="academic-item">
         <strong>Hotel Room Reservation System</strong> — C++, OOP, File Handling
-        &nbsp; <a href="https://github.com/Maham-Saleem/Hotel-Room-Reservation-System" target="_blank">GitHub</a>
+        <a href="https://github.com/Maham-Saleem/Hotel-Room-Reservation-System" target="_blank"> &middot; GitHub</a>
       </div>
 
-      <div class="section-title" style="margin-top: 16px;">Experience</div>
+      <div class="section-title" style="margin-top: 10px;">Experience</div>
 
       <div class="exp-item">
         <div class="exp-header">
@@ -301,18 +306,6 @@ hr.divider { border: none; border-top: 2px solid #6C63FF; margin: 14px 0 12px 0;
             <span class="exp-org">CAUSE Society (CUST)</span>
           </div>
         </div>
-      </div>
-
-      <div class="section-title" style="margin-top: 16px;">Certifications</div>
-
-      <div class="cert-grid">
-        <span>Chancellor's Honorship Certificate (Fall 2024)</span>
-        <span>Chancellor's Honorship Certificate (Spring 2025)</span>
-        <span>CodeAlpha C++ Programming Internship Certificate</span>
-        <span>Deloitte Australia Technology Job Simulation</span>
-        <span>AWS Cloud Core Team Badge</span>
-        <span>Volunteering Head Certificate</span>
-        <span>65 Hours Community Service Certificate</span>
       </div>
 
     </div>
