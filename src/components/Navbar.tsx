@@ -100,7 +100,7 @@ export default function Navbar() {
                 {dark ? <Sun size={16} /> : <Moon size={16} />}
               </button>
               <a
-                href="/Maham-Saleem-CV.pdf"
+                href="/Maham_Saleem_CV.pdf"
                 download
                 className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium border border-border text-text-secondary hover:text-text hover:border-primary/30 transition-all duration-200"
               >
@@ -161,7 +161,7 @@ export default function Navbar() {
                 GitHub
               </a>
               <a
-                href="/Maham-Saleem-CV.pdf"
+                href="/Maham_Saleem_CV.pdf"
                 download
                 className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium text-text-secondary hover:text-text hover:bg-black/3 dark:hover:bg-white/5 transition-all"
               >
