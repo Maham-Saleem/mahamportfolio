@@ -1,6 +1,12 @@
 import { motion } from 'framer-motion';
-import { Download, ChevronRight, Mail, Code2, Sparkles, FileText } from 'lucide-react';
+import { Download, ChevronRight, Mail, Code2, Sparkles, FileText, Smartphone, Palette, ShoppingBag } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './GithubIcon';
+
+const services = [
+  { icon: Smartphone, label: 'Web Applications' },
+  { icon: ShoppingBag, label: 'E-Commerce' },
+  { icon: Palette, label: 'UI/UX Design' },
+];
 
 export default function Hero() {
   const scrollTo = (id: string) => {
@@ -25,7 +31,7 @@ export default function Hero() {
             >
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 text-primary rounded-full text-sm font-medium mb-6">
                 <Sparkles size={16} />
-                Software Engineering Student
+                Full-Stack Web Developer
               </span>
             </motion.div>
 
@@ -35,18 +41,33 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-4"
             >
-              Hi, I'm{' '}
-              <span className="gradient-text">Maham Saleem</span>
+              Building <span className="gradient-text">Digital</span> Experiences That Drive Results
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg sm:text-xl text-text-secondary mb-6 max-w-xl"
+              className="text-lg sm:text-xl text-text-secondary mb-8 max-w-xl"
             >
-              A passionate full-stack web developer crafting elegant, high-performance digital experiences with modern technologies.
+              I'm <strong className="text-text">Maham Saleem</strong>, a full-stack web developer specializing in 
+              crafting modern, high-performance web applications, e-commerce platforms, and seamless user experiences 
+              using cutting-edge technologies.
             </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              className="flex flex-wrap gap-3 mb-8"
+            >
+              {services.map((s) => (
+                <span key={s.label} className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-card border border-border text-sm font-medium text-text-secondary">
+                  <s.icon size={16} className="text-primary" />
+                  {s.label}
+                </span>
+              ))}
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -56,14 +77,14 @@ export default function Hero() {
             >
               <button
                 onClick={() => scrollTo('#projects')}
-                className="group inline-flex items-center gap-2 px-6 py-3 gradient-bg text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
+                className="group inline-flex items-center gap-2 px-7 py-3.5 gradient-bg text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300"
               >
-                View Projects
+                View My Work
                 <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </button>
               <button
                 onClick={() => scrollTo('#contact')}
-                className="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary/30 text-primary rounded-full font-medium hover:bg-primary hover:text-white transition-all duration-300"
+                className="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-primary/30 text-primary rounded-full font-medium hover:bg-primary hover:text-white hover:-translate-y-0.5 transition-all duration-300"
               >
                 <Download size={18} />
                 Download Resume
@@ -76,13 +97,13 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex items-center gap-4 mt-8"
             >
-              <a href="https://github.com/Maham-Saleem" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-card border border-border text-text-secondary hover:text-primary hover:border-primary transition-all duration-300 shadow-sm hover:shadow-md">
+              <a href="https://github.com/Maham-Saleem" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-card border border-border text-text-secondary hover:text-primary hover:border-primary hover:-translate-y-0.5 transition-all duration-300 shadow-sm hover:shadow-md">
                 <GithubIcon size={20} />
               </a>
-              <a href="https://linkedin.com/in/maham-saleem" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-card border border-border text-text-secondary hover:text-primary hover:border-primary transition-all duration-300 shadow-sm hover:shadow-md">
+              <a href="https://linkedin.com/in/maham-saleem" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-card border border-border text-text-secondary hover:text-primary hover:border-primary hover:-translate-y-0.5 transition-all duration-300 shadow-sm hover:shadow-md">
                 <LinkedinIcon size={20} />
               </a>
-              <a href="mailto:maham.saleem@email.com" className="p-3 rounded-full bg-card border border-border text-text-secondary hover:text-primary hover:border-primary transition-all duration-300 shadow-sm hover:shadow-md">
+              <a href="mailto:maham.saleem@email.com" className="p-3 rounded-full bg-card border border-border text-text-secondary hover:text-primary hover:border-primary hover:-translate-y-0.5 transition-all duration-300 shadow-sm hover:shadow-md">
                 <Mail size={20} />
               </a>
             </motion.div>
@@ -108,6 +129,9 @@ export default function Hero() {
               </div>
               <div className="absolute -bottom-2 -left-4 w-14 h-14 bg-card border border-border rounded-xl shadow-md flex items-center justify-center animate-float" style={{ animationDelay: '1s' }}>
                 <FileText size={22} className="text-secondary" />
+              </div>
+              <div className="absolute top-4 -left-3 w-12 h-12 bg-card border border-border rounded-xl shadow-md flex items-center justify-center animate-float" style={{ animationDelay: '0.5s' }}>
+                <ShoppingBag size={20} className="text-primary" />
               </div>
             </div>
           </motion.div>
