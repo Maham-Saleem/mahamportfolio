@@ -93,36 +93,38 @@ export default function Contact() {
             initial={{ opacity: 0, x: -20 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-5"
+            className="flex flex-col h-full"
           >
-            {contactItems.map((item) => {
-              const Icon = item.icon;
-              return (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-md transition-all duration-300 group"
-                >
-                  <div className="w-11 h-11 rounded-xl bg-primary/5 text-primary flex items-center justify-center group-hover:gradient-bg group-hover:text-white transition-all duration-300 shrink-0">
-                    <Icon size={18} />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-xs text-text-secondary">{item.label}</p>
-                    <p className="text-sm font-medium truncate">{item.value}</p>
-                  </div>
-                  <span className="text-xs font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity shrink-0">
-                    {item.btnLabel} &rarr;
-                  </span>
-                </a>
-              );
-            })}
+            <div className="space-y-4 flex-1">
+              {contactItems.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-4 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-md transition-all duration-300 group"
+                  >
+                    <div className="w-11 h-11 rounded-xl bg-primary/5 text-primary flex items-center justify-center group-hover:gradient-bg group-hover:text-white transition-all duration-300 shrink-0">
+                      <Icon size={18} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs text-text-secondary">{item.label}</p>
+                      <p className="text-sm font-medium truncate">{item.value}</p>
+                    </div>
+                    <span className="text-xs font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity shrink-0">
+                      {item.btnLabel} &rarr;
+                    </span>
+                  </a>
+                );
+              })}
+            </div>
 
             <a
               href="/Maham_Saleem_CV.pdf"
               download
-              className="mt-2 flex items-center justify-center gap-2 px-6 py-3.5 gradient-bg text-white rounded-xl font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300"
+              className="flex items-center justify-center gap-2 px-6 py-3.5 gradient-bg text-white rounded-xl font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300"
             >
               <Download size={16} />
               Download CV
