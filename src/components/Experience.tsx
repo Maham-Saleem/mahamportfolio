@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { GraduationCap, Award, Users, X, ArrowUpRight } from 'lucide-react';
+import { GraduationCap, Award, Users, X, ArrowUpRight, BookOpen } from 'lucide-react';
 import {
   experienceData,
   academicCertifications,
@@ -9,12 +9,6 @@ import {
   leadershipCertifications,
   certificationsData,
 } from '../data';
-
-const categoryMeta = {
-  academic: { icon: GraduationCap, label: 'Academic' },
-  professional: { icon: Award, label: 'Professional' },
-  leadership: { icon: Users, label: 'Leadership & Community' },
-} as const;
 
 const allCertsByCategory = [
   { key: 'academic', label: 'Academic', icon: GraduationCap, items: academicCertifications },
@@ -45,7 +39,8 @@ function JourneyCard({ item, index }: { item: typeof experienceData[0]; index: n
 }
 
 function CertMiniCard({ cert }: { cert: typeof certificationsData[0] }) {
-  const Icon = categoryMeta[cert.category].icon;
+  const iconMap = { academic: GraduationCap, professional: Award, leadership: Users };
+  const Icon = iconMap[cert.category];
   return (
     <div className="flex items-center gap-3 p-2.5 rounded-xl bg-card border border-border hover:border-primary/15 transition-all duration-300 group">
       <div className="w-7 h-7 rounded-lg bg-primary/5 text-primary flex items-center justify-center shrink-0 group-hover:gradient-bg group-hover:text-white transition-all duration-300">
@@ -87,48 +82,46 @@ export default function Experience() {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 mt-14">
-            <div className="lg:col-span-3">
-              <h3 className="text-sm font-bold font-heading tracking-wide mb-5 flex items-center gap-2">
-                <GraduationCap size={14} className="text-primary" />
-                Journey
-              </h3>
-              <div className="space-y-0">
-                {experienceData.map((item, i) => (
-                  <JourneyCard key={i} item={item} index={i} />
-                ))}
-              </div>
+          <div className="mt-14 max-w-3xl">
+            <h3 className="text-sm font-bold font-heading tracking-wide mb-6 flex items-center gap-2">
+              <BookOpen size={14} className="text-primary" />
+              Journey
+            </h3>
+            <div className="space-y-0">
+              {experienceData.map((item, i) => (
+                <JourneyCard key={i} item={item} index={i} />
+              ))}
             </div>
+          </div>
 
-            <div className="lg:col-span-2">
-              <h3 className="text-sm font-bold font-heading tracking-wide mb-5 flex items-center gap-2">
-                <Award size={14} className="text-primary" />
-                Achievements & Certifications
-              </h3>
-              <div className="space-y-5">
-                {featuredCertsByCategory.map((cat) => (
-                  <div key={cat.key}>
-                    <div className="flex items-center gap-2 mb-2.5">
-                      <cat.icon size={12} className="text-text-secondary" />
-                      <span className="text-xs font-semibold text-text-secondary tracking-wide">{cat.label}</span>
-                    </div>
-                    <div className="space-y-2">
-                      {cat.items.map((cert, i) => (
-                        <CertMiniCard key={`${cert.title}-${i}`} cert={cert} />
-                      ))}
-                    </div>
+          <div className="mt-20">
+            <h3 className="text-sm font-bold font-heading tracking-wide mb-6 flex items-center gap-2">
+              <Award size={14} className="text-primary" />
+              Achievements & Certifications
+            </h3>
+            <div className="grid md:grid-cols-3 gap-5">
+              {featuredCertsByCategory.map((cat) => (
+                <div key={cat.key}>
+                  <div className="flex items-center gap-2 mb-3">
+                    <cat.icon size={12} className="text-primary" />
+                    <span className="text-xs font-semibold text-text-secondary tracking-wide">{cat.label}</span>
                   </div>
-                ))}
-              </div>
-
-              <button
-                onClick={() => setCertModalOpen(true)}
-                className="mt-4 w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl border border-border text-xs font-medium text-text-secondary hover:text-primary hover:border-primary/20 transition-all duration-300"
-              >
-                View All Certificates ({certificationsData.length})
-                <ArrowUpRight size={12} />
-              </button>
+                  <div className="space-y-2">
+                    {cat.items.map((cert, i) => (
+                      <CertMiniCard key={`${cert.title}-${i}`} cert={cert} />
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
+
+            <button
+              onClick={() => setCertModalOpen(true)}
+              className="mt-5 inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-border text-xs font-medium text-text-secondary hover:text-primary hover:border-primary/20 transition-all duration-300"
+            >
+              View All Certificates ({certificationsData.length})
+              <ArrowUpRight size={12} />
+            </button>
           </div>
         </div>
       </section>
