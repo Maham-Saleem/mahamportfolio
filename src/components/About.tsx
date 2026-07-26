@@ -55,7 +55,7 @@ export default function About() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-14"
         >
-          <p className="text-base sm:text-lg text-text-secondary leading-relaxed text-justify">
+          <p className="text-base sm:text-lg text-text-secondary leading-relaxed sm:text-justify">
             I'm a Frontend Developer and Software Engineering student at Capital University
             of Science and Technology (CUST), maintaining a CGPA of 3.95/4.00. I specialise
             in building modern, responsive web applications with a strong focus on clean
@@ -69,7 +69,7 @@ export default function About() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-12 grid sm:grid-cols-3 gap-5"
+          className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-5"
         >
           {infoCards.map((card) => {
             const Icon = card.icon;

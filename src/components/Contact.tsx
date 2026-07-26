@@ -88,7 +88,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mt-16">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -137,7 +137,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <form onSubmit={onSubmit} className="space-y-5" noValidate>
-              <div className="grid sm:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-1.5">
                     Name

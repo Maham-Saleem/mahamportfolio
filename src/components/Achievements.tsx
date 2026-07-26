@@ -21,7 +21,7 @@ function CertCard({ cert }: { cert: typeof certificationsData[0] }) {
   const icons = { academic: GraduationCap, professional: Award, leadership: Users };
   const Icon = icons[cert.category];
   return (
-    <div className="flex items-center gap-3.5 p-4 rounded-xl bg-card border border-border hover:border-primary/15 transition-all duration-300 group h-[90px]">
+    <div className="flex items-center gap-3.5 p-4 rounded-xl bg-card border border-border hover:border-primary/15 transition-all duration-300 group min-h-[76px] md:min-h-[90px]">
       <div className="w-10 h-10 rounded-xl bg-primary/5 text-primary flex items-center justify-center shrink-0 group-hover:gradient-bg group-hover:text-white transition-all duration-300">
         <Icon size={16} />
       </div>
@@ -61,7 +61,7 @@ export default function Achievements() {
             </p>
           </motion.div>
 
-          <div className="mt-14 grid md:grid-cols-3 gap-6">
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
             {featuredCats.map((cat) => (
               <motion.div
                 key={cat.key}

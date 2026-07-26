@@ -36,7 +36,7 @@ export default function TechStack() {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 gap-6 mt-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-14">
           {techData.map((category, i) => {
             const CatIcon = categoryIcons[category.category] || Code2;
             return (

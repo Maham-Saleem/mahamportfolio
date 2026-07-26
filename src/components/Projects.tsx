@@ -71,7 +71,7 @@ function FeaturedCard({ project, index, inView }: { project: typeof projectsData
           ))}
         </div>
 
-        <div className="flex items-center gap-3 mt-5 pt-4 border-t border-border">
+        <div className="flex items-center gap-3 mt-5 pt-4 border-t border-border flex-wrap">
           <a
             href={project.github}
             target="_blank"
@@ -130,7 +130,7 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        <div className="mt-16 grid sm:grid-cols-2 gap-6">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-6">
           {projectsData.map((project, i) => (
             <FeaturedCard key={project.slug} project={project} index={i} inView={inView} />
           ))}

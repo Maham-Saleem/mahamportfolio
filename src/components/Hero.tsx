@@ -102,22 +102,22 @@ export default function Hero() {
             >
               <button
                 onClick={() => scrollTo('#projects')}
-                className="group px-6 py-3 gradient-bg text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 w-[140px] justify-center text-sm"
+                className="group px-5 py-2.5 sm:px-6 sm:py-3 gradient-bg text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 w-[120px] sm:w-[140px] justify-center text-xs sm:text-sm"
               >
                 View Projects
-                <ArrowDown size={14} className="group-hover:translate-y-0.5 transition-transform" />
+                <ArrowDown size={13} className="group-hover:translate-y-0.5 transition-transform" />
               </button>
               <a
                 href="/Maham_Saleem_CV.pdf"
                 download
-                className="px-6 py-3 rounded-full font-medium border-2 border-border text-text-secondary hover:border-primary/30 hover:text-primary hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 w-[140px] justify-center text-sm"
+                className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-full font-medium border-2 border-border text-text-secondary hover:border-primary/30 hover:text-primary hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 w-[120px] sm:w-[140px] justify-center text-xs sm:text-sm"
               >
-                <Download size={14} />
+                <Download size={13} />
                 Download CV
               </a>
               <button
                 onClick={() => scrollTo('#contact')}
-                className="px-6 py-3 rounded-full font-medium border-2 border-border text-text-secondary hover:border-primary/30 hover:text-primary hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 w-[140px] justify-center text-sm"
+                className="px-5 py-2.5 sm:px-6 sm:py-3 rounded-full font-medium border-2 border-border text-text-secondary hover:border-primary/30 hover:text-primary hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 w-[120px] sm:w-[140px] justify-center text-xs sm:text-sm"
               >
                 <Mail size={16} />
                 Contact
