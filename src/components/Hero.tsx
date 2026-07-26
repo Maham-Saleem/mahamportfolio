@@ -212,14 +212,14 @@ export default function Hero() {
                   <span className="w-3 h-3 rounded-full bg-green-400" />
                   <div className="ml-4 flex-1 max-w-[60%] mx-auto">
                     <div className="px-3 py-1.5 rounded-lg bg-bg border border-border/40 text-[11px] text-text-secondary/60 text-center truncate">
-                      mahamstore.vercel.app
+                      smars-iota.vercel.app
                     </div>
                   </div>
                 </div>
                 <div className="relative bg-gradient-to-br from-pink-100 to-rose-50 dark:from-pink-950/30 dark:to-rose-950/20">
                   <img
-                    src="/images/mahamstore.png"
-                    alt="Maham Clothing Store"
+                    src="/images/smars.png"
+                    alt="SMAR's Perfume Store"
                     className="w-full h-auto block"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-card/5 to-transparent pointer-events-none" />
