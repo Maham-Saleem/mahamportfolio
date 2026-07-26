@@ -4,13 +4,6 @@ import { ArrowLeft, ExternalLink, CheckCircle2 } from 'lucide-react';
 import { GithubIcon } from '../components/GithubIcon';
 import { projectsData, featuredProjects } from '../data';
 
-const caseStudyIcons = {
-  'maham-clothing-store': 'MCS',
-  'parima': 'PRM',
-  'brew-and-bean': 'B&B',
-  'smars-perfume-store': 'SPS',
-};
-
 export default function ProjectCaseStudy() {
   const { slug } = useParams<{ slug: string }>();
   const project = projectsData.find((p) => p.slug === slug);
@@ -33,20 +26,11 @@ export default function ProjectCaseStudy() {
 
   return (
     <div className="min-h-screen bg-bg">
-      <div className={`h-64 sm:h-80 md:h-96 relative flex items-center justify-center ${project.image ? '' : `bg-gradient-to-br ${project.gradient}`}`}>
+      <div className={`h-64 sm:h-80 md:h-96 relative ${project.image ? '' : `bg-gradient-to-br ${project.gradient}`}`}>
         {project.image ? (
           <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
         ) : null}
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative text-center">
-          <div className="w-20 h-20 mx-auto rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mb-4">
-            <span className="text-white font-bold text-2xl">
-              {(caseStudyIcons as Record<string, string>)[project.slug] || project.title.split(' ').map(w => w[0]).join('').slice(0, 2)}
-            </span>
-          </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-white">{project.title}</h1>
-          <p className="text-white/70 mt-2 text-sm sm:text-base">{project.category}</p>
-        </div>
+        <div className="absolute inset-0 bg-black/10" />
         <Link
           to="/"
           className="absolute top-6 left-6 inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium hover:bg-white/20 transition-all border border-white/15"
