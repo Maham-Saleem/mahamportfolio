@@ -10,7 +10,7 @@ import Experience from './components/Experience';
 import Certifications from './components/Certifications';
 import Achievements from './components/Achievements';
 import Education from './components/Education';
-import GithubStats from './components/GithubStats';
+import WhyWorkWithMe from './components/WhyWorkWithMe';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
@@ -30,7 +30,7 @@ function HomePage() {
         <Certifications />
         <Achievements />
         <Education />
-        <GithubStats />
+        <WhyWorkWithMe />
         <Contact />
       </main>
       <Footer />
