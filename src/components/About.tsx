@@ -41,7 +41,6 @@ export default function About() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="max-w-2xl"
         >
           <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">About</span>
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold font-heading tracking-tight leading-[1.1]">
@@ -56,17 +55,17 @@ export default function About() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-14 space-y-4"
         >
-          <p className="text-base sm:text-lg text-text-secondary leading-relaxed max-w-3xl">
+          <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
             I'm a frontend developer who turns ideas into clean, responsive web experiences.
             I focus on building interfaces that work well, look polished, and are built to last.
           </p>
-          <p className="text-base sm:text-lg text-text-secondary leading-relaxed max-w-3xl">
+          <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
             I work with modern tools like React, TypeScript, and Tailwind CSS to create
             everything from business websites to full e-commerce platforms. Every project
             gets the same attention to detail — consistent spacing, thoughtful interactions,
             and code that's easy to maintain.
           </p>
-          <p className="text-base sm:text-lg text-text-secondary leading-relaxed max-w-3xl">
+          <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
             I'm currently pursuing a Software Engineering degree at Capital University of
             Science and Technology, where I maintain a CGPA of 3.95 / 4.00.
           </p>
