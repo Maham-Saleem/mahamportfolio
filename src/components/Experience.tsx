@@ -20,8 +20,8 @@ export default function Experience() {
             Experience
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4">
-            Experience &{' '}
-            <span className="gradient-text">Leadership</span>
+            Professional{' '}
+            <span className="gradient-text">Experience</span>
           </h2>
           <div className="w-20 h-1 gradient-bg rounded-full mx-auto" />
         </motion.div>

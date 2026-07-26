@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Target, Zap, Heart, Code2, Sparkles } from 'lucide-react';
+import { Code2, Sparkles, Shield, Zap, Smartphone } from 'lucide-react';
 
 const highlights = [
-  { icon: Target, label: 'Goal-Oriented', desc: 'Focused on building impactful software solutions' },
-  { icon: Zap, label: 'Fast Learner', desc: 'Quickly adapting to new technologies and frameworks' },
-  { icon: Heart, label: 'Passionate', desc: 'Dedicated to crafting exceptional user experiences' },
+  { icon: Code2, label: 'Full-Stack Development', desc: 'End-to-end web solutions from database to UI' },
+  { icon: Shield, label: 'Clean Code', desc: 'Maintainable, scalable, and well-architected codebases' },
+  { icon: Zap, label: 'Performance Focused', desc: 'Optimized applications with fast load times' },
+  { icon: Smartphone, label: 'Responsive Design', desc: 'Pixel-perfect experiences across all devices' },
 ];
 
 export default function About() {
@@ -29,8 +30,7 @@ export default function About() {
             About Me
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4">
-            Getting to Know{' '}
-            <span className="gradient-text">Me</span>
+            What I <span className="gradient-text">Deliver</span>
           </h2>
           <div className="w-20 h-1 gradient-bg rounded-full mx-auto" />
         </motion.div>
@@ -43,12 +43,16 @@ export default function About() {
           >
             <div className="relative">
               <div className="w-full aspect-[4/5] rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 border border-border overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center">
+                <div className="w-full h-full flex flex-col items-center justify-center gap-3">
                   <Code2 size={80} className="text-primary/30" />
+                  <span className="text-text-secondary/40 text-lg font-heading font-semibold">Maham Saleem</span>
                 </div>
               </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 gradient-bg rounded-2xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-2xl font-heading">3+</span>
+              <div className="absolute -bottom-4 -right-4 w-28 h-28 gradient-bg rounded-2xl flex items-center justify-center shadow-lg">
+                <div className="text-center text-white">
+                  <div className="font-bold text-3xl font-heading">12+</div>
+                  <div className="text-[10px] opacity-80">Projects</div>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -60,15 +64,15 @@ export default function About() {
             className="space-y-6"
           >
             <p className="text-text-secondary leading-relaxed text-lg">
-              I'm a dedicated Software Engineering student with a deep passion for full-stack web development. 
-              My journey in tech started with curiosity about how websites work, which evolved into a drive 
-              to build elegant, scalable, and user-friendly applications.
+              I specialize in building modern, high-performance web applications that help businesses 
+              establish a strong digital presence. From e-commerce platforms to interactive web tools, 
+              I deliver solutions that are both visually compelling and technically robust.
             </p>
             <p className="text-text-secondary leading-relaxed">
-              I specialize in creating modern web applications using React, Node.js, and TypeScript. 
-              My goal is to leverage technology to solve real-world problems while continuously learning 
-              and growing as a developer. I believe in writing clean code, crafting meaningful user 
-              experiences, and contributing to the developer community.
+              With expertise across the full development stack, I handle everything from database 
+              architecture and API design to responsive front-end interfaces. My approach combines 
+              clean code practices, performance optimization, and user-centered design to create 
+              applications that drive real results.
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-4">
@@ -78,9 +82,9 @@ export default function About() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.4 + i * 0.1 }}
-                  className="flex items-start gap-3 p-4 rounded-xl bg-card border border-border hover:shadow-md transition-all duration-300"
+                  className="flex items-start gap-3 p-4 rounded-xl bg-card border border-border hover:shadow-md hover:border-primary/20 transition-all duration-300"
                 >
-                  <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
+                  <div className="p-2.5 rounded-lg bg-primary/10 text-primary shrink-0">
                     <item.icon size={18} />
                   </div>
                   <div>

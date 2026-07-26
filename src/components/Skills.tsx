@@ -26,10 +26,10 @@ export default function Skills() {
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 text-primary rounded-full text-sm font-medium mb-4">
             <Sparkles size={16} />
-            Skills & Expertise
+            Technologies & Expertise
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4">
-            My <span className="gradient-text">Toolbox</span>
+            Tech Stack I{' '}<span className="gradient-text">Work With</span>
           </h2>
           <div className="w-20 h-1 gradient-bg rounded-full mx-auto" />
         </motion.div>

@@ -107,38 +107,38 @@ export const projectsData = [
 
 export const experienceData = [
   {
-    title: 'Full-Stack Developer Intern',
+    title: 'Full-Stack Developer',
     organization: 'Tech Solutions Inc.',
     period: 'Jun 2025 - Present',
     description:
-      'Developing and maintaining web applications using React and Node.js. Collaborating with cross-functional teams to deliver high-quality software solutions.',
+      'Architecting and building production-grade web applications using React, Node.js, and TypeScript. Collaborating cross-functionally to deliver scalable, maintainable software solutions for enterprise clients.',
     icon: Briefcase,
     type: 'work',
   },
   {
-    title: 'Lead Web Developer',
+    title: 'Lead Developer',
     organization: 'University Tech Society',
     period: 'Sep 2024 - Present',
     description:
-      'Leading a team of 15+ developers in building and maintaining the society website. Organizing workshops and hackathons to promote web development.',
+      'Leading a team of 15+ developers, establishing coding standards, conducting code reviews, and delivering the society\'s web platform. Organizing technical workshops and hackathons to foster engineering excellence.',
     icon: Users,
     type: 'leadership',
   },
   {
-    title: 'Teaching Assistant - Data Structures',
+    title: 'Teaching Assistant – Data Structures',
     organization: 'University of Engineering',
     period: 'Jan 2025 - May 2025',
     description:
-      'Assisted professors in conducting labs, grading assignments, and mentoring 40+ students in data structures and algorithms.',
+      'Mentored 40+ students in data structures and algorithms, conducted lab sessions, graded assignments, and provided one-on-one guidance to improve student outcomes.',
     icon: BookOpen,
     type: 'volunteer',
   },
   {
     title: 'Open Source Contributor',
-    organization: 'Various Projects',
+    organization: 'GitHub',
     period: '2024 - Present',
     description:
-      'Contributed to multiple open-source projects including bug fixes, feature implementations, and documentation improvements.',
+      'Active contributor to multiple open-source projects, delivering bug fixes, feature implementations, and documentation improvements that serve thousands of developers.',
     icon: Heart,
     type: 'volunteer',
   },
