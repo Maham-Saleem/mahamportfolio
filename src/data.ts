@@ -1,6 +1,6 @@
 import {
   Code2, Palette, Server, Database, GitBranch,
-  ShoppingBag, Cloud, MapPin, Bell,
+  ShoppingBag, Cloud, MapPin, Bell, Globe, Store,
   Briefcase, Heart, Users, BookOpen
 } from 'lucide-react';
 
@@ -45,40 +45,60 @@ export const projectsData = [
   {
     title: 'Maham Clothing Store',
     description:
-      'A full-featured e-commerce platform for clothing with product catalog, shopping cart, user authentication, and secure checkout.',
+      'A modern responsive e-commerce website featuring secure authentication, wishlist functionality, shopping cart, checkout flow, account management, and a premium shopping experience. Designed with a strong focus on usability, performance, and mobile responsiveness.',
     tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
-    github: 'https://github.com/Maham-Saleem',
-    demo: 'https://mahamclothing.vercel.app',
+    github: 'https://github.com/Maham-Saleem/mahamstore',
+    demo: 'https://mahamstore.vercel.app/',
     icon: ShoppingBag,
     gradient: 'from-pink-500 to-rose-500',
   },
   {
+    title: 'Parima – Community Opportunities Platform',
+    description:
+      'A full-featured community opportunities platform connecting users with jobs, volunteering opportunities, and local events. Built with React, TypeScript, Supabase, PostgreSQL, and modern frontend technologies while supporting authentication, user roles, applications, profiles, ratings, and real-time updates.',
+    tags: ['React', 'TypeScript', 'Supabase', 'PostgreSQL'],
+    github: 'https://github.com/Maham-Saleem/parima',
+    demo: 'https://parima-chi.vercel.app/',
+    icon: Globe,
+    gradient: 'from-purple-500 to-indigo-500',
+  },
+  {
     title: 'Brew & Bean Coffee House',
     description:
-      'A beautifully designed coffee shop website with menu display, online ordering system, location finder, and loyalty program.',
-    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma'],
-    github: 'https://github.com/Maham-Saleem',
-    demo: 'https://brewandbean.vercel.app',
+      'A modern coffee shop website designed with an elegant user interface, interactive menu browsing, category filtering, responsive layouts, and a seamless ordering experience suitable for cafés and restaurants.',
+    tags: ['React', 'TypeScript', 'Tailwind CSS'],
+    github: 'https://github.com/Maham-Saleem/brewandbean',
+    demo: 'https://brewandbean-seven.vercel.app/',
     icon: Cloud,
     gradient: 'from-amber-500 to-orange-500',
   },
   {
-    title: 'Weather Forecast System',
+    title: "SMAR's Perfume Store",
     description:
-      'A real-time weather forecasting application with interactive maps, 7-day forecasts, and location-based weather alerts.',
-    tags: ['React', 'OpenWeather API', 'Chart.js', 'Geolocation'],
-    github: 'https://github.com/Maham-Saleem',
-    demo: 'https://weatherforecast.vercel.app',
+      'A luxury perfume e-commerce frontend developed using HTML, CSS, and PHP, featuring elegant product displays, responsive layouts, intuitive navigation, and a premium shopping interface.',
+    tags: ['HTML', 'CSS', 'PHP'],
+    github: 'https://github.com/Maham-Saleem/smars',
+    demo: 'https://smars-iota.vercel.app/',
+    icon: Store,
+    gradient: 'from-emerald-500 to-teal-500',
+  },
+  {
+    title: 'Weather Forecasting System',
+    description:
+      'A C++ application that integrates a weather API to retrieve live weather information, parse JSON data, and display real-time forecasts, demonstrating API integration and backend programming concepts.',
+    tags: ['C++', 'API Integration', 'JSON', 'OOP'],
+    github: 'https://github.com/Maham-Saleem/Weather-Forecasting-System',
+    demo: null,
     icon: MapPin,
     gradient: 'from-blue-500 to-cyan-500',
   },
   {
-    title: 'Evacuation System',
+    title: 'Disaster Evacuation System',
     description:
-      'An emergency evacuation management system with real-time tracking, alert notifications, and route optimization.',
-    tags: ['Django', 'Python', 'PostgreSQL', 'WebSockets', 'Google Maps'],
-    github: 'https://github.com/Maham-Saleem',
-    demo: 'https://evacuationsystem.vercel.app',
+      'A route planning application that uses mapping APIs to determine the shortest and safest evacuation path during emergencies, demonstrating algorithmic problem solving and API integration.',
+    tags: ['C++', 'Mapping API', 'Algorithms', 'Graph Theory'],
+    github: 'https://github.com/Maham-Saleem/Disaster-Evacuation-System',
+    demo: null,
     icon: Bell,
     gradient: 'from-red-500 to-purple-500',
   },

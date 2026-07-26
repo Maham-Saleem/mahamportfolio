@@ -86,15 +86,17 @@ export default function Projects() {
                       <GithubIcon size={16} />
                       GitHub
                     </a>
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-secondary transition-colors"
-                    >
-                      <ExternalLink size={16} />
-                      Live Demo
-                    </a>
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-secondary transition-colors"
+                      >
+                        <ExternalLink size={16} />
+                        Live Demo
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.div>
