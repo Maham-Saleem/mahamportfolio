@@ -1,26 +1,34 @@
-import { Mail, Heart } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './GithubIcon';
 import { socialLinks } from '../data';
 
 export default function Footer() {
   return (
-    <footer className="py-8 border-t border-border">
+    <footer className="py-10 border-t border-border">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-text-secondary text-sm flex items-center gap-1">
-            &copy; {new Date().getFullYear()} Maham Saleem. Made with
-            <Heart size={14} className="text-red-500 fill-red-500" />
-          </p>
+          <div className="flex items-center gap-2">
+            <span className="text-lg font-bold font-heading">
+              <span className="gradient-text">M</span>
+              <span className="text-text">aham</span>
+              <span className="gradient-text">.</span>
+            </span>
+            <span className="text-sm text-text-secondary">
+              &copy; {new Date().getFullYear()} All rights reserved.
+            </span>
+          </div>
 
-          <div className="flex items-center gap-3">
-            <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-text-secondary hover:text-primary hover:bg-primary/5 transition-all">
+          <div className="flex items-center gap-2">
+            <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl text-text-secondary hover:text-primary hover:bg-primary/5 transition-all" aria-label="GitHub">
               <GithubIcon size={18} />
             </a>
-            <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-text-secondary hover:text-primary hover:bg-primary/5 transition-all">
+            <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl text-text-secondary hover:text-primary hover:bg-primary/5 transition-all" aria-label="LinkedIn">
               <LinkedinIcon size={18} />
             </a>
-            <a href={`mailto:${socialLinks.email}`} className="p-2 rounded-lg text-text-secondary hover:text-primary hover:bg-primary/5 transition-all">
-              <Mail size={18} />
+            <a href={`mailto:${socialLinks.email}`} className="p-2.5 rounded-xl text-text-secondary hover:text-primary hover:bg-primary/5 transition-all" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
             </a>
           </div>
         </div>
