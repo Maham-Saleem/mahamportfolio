@@ -45,6 +45,12 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            <button
+              onClick={() => handleClick('#contact')}
+              className="px-5 py-2 gradient-bg text-white rounded-full text-sm font-medium shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300"
+            >
+              Hire Me
+            </button>
           </div>
 
           <button

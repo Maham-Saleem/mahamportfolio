@@ -34,9 +34,12 @@ export default function Contact() {
             Get In Touch
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4">
-            Let's{' '}
-            <span className="gradient-text">Connect</span>
+            Let's Build Something{' '}
+            <span className="gradient-text">Great Together</span>
           </h2>
+          <p className="text-text-secondary max-w-xl mx-auto">
+            Have a project in mind? I'd love to hear about it. Let's discuss how I can help bring your ideas to life.
+          </p>
           <div className="w-20 h-1 gradient-bg rounded-full mx-auto" />
         </motion.div>
 
@@ -46,9 +49,10 @@ export default function Contact() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-xl font-bold font-heading mb-6">Let's work together</h3>
+            <h3 className="text-2xl font-bold font-heading mb-4">Ready to start your project?</h3>
             <p className="text-text-secondary mb-8">
-              Have a project in mind or just want to say hello? I'd love to hear from you!
+              Whether you need a full-featured web application, an e-commerce platform, or a custom website — 
+              I'm here to help. Reach out and let's discuss your vision.
             </p>
 
             <div className="space-y-5">

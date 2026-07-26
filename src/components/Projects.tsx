@@ -36,6 +36,9 @@ export default function Projects() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading mb-4">
             Featured <span className="gradient-text">Projects</span>
           </h2>
+          <p className="text-text-secondary max-w-xl mx-auto mb-6">
+            A selection of real-world applications I've built — from e-commerce platforms to community tools.
+          </p>
           <div className="w-20 h-1 gradient-bg rounded-full mx-auto" />
         </motion.div>
 
