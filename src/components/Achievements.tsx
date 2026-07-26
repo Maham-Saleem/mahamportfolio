@@ -21,7 +21,7 @@ function CertCard({ cert }: { cert: typeof certificationsData[0] }) {
   const icons = { academic: GraduationCap, professional: Award, leadership: Users };
   const Icon = icons[cert.category];
   return (
-    <div className="flex items-center gap-3.5 p-4 rounded-xl bg-card border border-border hover:border-primary/15 transition-all duration-300 group">
+    <div className="flex items-center gap-3.5 p-4 rounded-xl bg-card border border-border hover:border-primary/15 transition-all duration-300 group h-[90px]">
       <div className="w-10 h-10 rounded-xl bg-primary/5 text-primary flex items-center justify-center shrink-0 group-hover:gradient-bg group-hover:text-white transition-all duration-300">
         <Icon size={16} />
       </div>
