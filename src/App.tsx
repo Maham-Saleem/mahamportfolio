@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,10 +12,11 @@ import GithubStats from './components/GithubStats';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
+import ProjectCaseStudy from './pages/ProjectCaseStudy';
 
-function App() {
+function HomePage() {
   return (
-    <div className="min-h-screen bg-bg">
+    <>
       <Navbar />
       <main>
         <Hero />
@@ -30,7 +32,20 @@ function App() {
       </main>
       <Footer />
       <BackToTop />
-    </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <div className="min-h-screen bg-bg">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/project/:slug" element={<ProjectCaseStudy />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
