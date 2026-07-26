@@ -1,7 +1,56 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { User, Code2, GraduationCap } from 'lucide-react';
-import { techData, educationData } from '../data';
+import { User, Layout, BookOpen } from 'lucide-react';
+
+const cards = [
+  {
+    icon: User,
+    title: 'Who I Am',
+    content: (
+      <>
+        <p>I am Maham Saleem, a Software Engineering student at Capital University of Science and Technology (CUST).</p>
+        <p className="mt-3">I currently have a CGPA of <strong className="text-text">3.95/4.00</strong>.</p>
+        <p className="mt-3">I enjoy building responsive, elegant, and user-friendly websites that combine clean design with excellent user experience.</p>
+      </>
+    ),
+  },
+  {
+    icon: Layout,
+    title: 'What I Build',
+    content: (
+      <>
+        <p>I primarily build modern frontend websites including:</p>
+        <ul className="mt-3 space-y-1.5">
+          {['Business Websites', 'Portfolio Websites', 'E-commerce Interfaces', 'Responsive Landing Pages', 'Interactive React Applications'].map((item) => (
+            <li key={item} className="flex items-center gap-2 text-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-3">My focus is writing clean code while creating visually appealing user interfaces.</p>
+      </>
+    ),
+  },
+  {
+    icon: BookOpen,
+    title: 'Currently Learning',
+    content: (
+      <>
+        <p>I am continuously improving my skills in:</p>
+        <ul className="mt-3 space-y-1.5">
+          {['React', 'TypeScript', 'Modern Frontend Development', 'Backend Development', 'Software Engineering'].map((item) => (
+            <li key={item} className="flex items-center gap-2 text-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-secondary shrink-0" />
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-4 text-sm text-text-secondary italic">Continuously learning and growing as a developer.</p>
+      </>
+    ),
+  },
+];
 
 export default function About() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -23,81 +72,23 @@ export default function About() {
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6 mt-16">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="p-7 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-lg transition-all duration-300"
-          >
-            <div className="w-11 h-11 rounded-xl gradient-bg flex items-center justify-center mb-5">
-              <User size={20} className="text-white" />
-            </div>
-            <h3 className="text-lg font-bold font-heading mb-4">Who I Am</h3>
-            <div className="text-sm text-text-secondary leading-relaxed">
-              <p>I am Maham Saleem, a Software Engineering student at Capital University of Science and Technology (CUST).</p>
-              <p className="mt-3">I currently have a CGPA of <strong className="text-text">3.95/4.00</strong>.</p>
-              <p className="mt-3">I enjoy building responsive, elegant, and user-friendly websites that combine clean design with excellent user experience.</p>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="p-7 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-lg transition-all duration-300"
-          >
-            <div className="w-11 h-11 rounded-xl gradient-bg flex items-center justify-center mb-5">
-              <Code2 size={20} className="text-white" />
-            </div>
-            <h3 className="text-lg font-bold font-heading mb-4">Tech Stack</h3>
-            <div className="space-y-4">
-              {techData.map((category) => (
-                <div key={category.category}>
-                  <h4 className="text-xs font-semibold uppercase tracking-wider text-text-secondary/60 mb-2">{category.category}</h4>
-                  <div className="flex flex-wrap gap-1.5">
-                    {category.items.map((item) => {
-                      const Icon = item.icon;
-                      return (
-                        <span
-                          key={item.name}
-                          className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-medium rounded-md bg-primary/5 text-primary/80"
-                        >
-                          <span className="text-[13px]"><Icon /></span>
-                          {item.name}
-                        </span>
-                      );
-                    })}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="p-7 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-lg transition-all duration-300"
-          >
-            <div className="w-11 h-11 rounded-xl gradient-bg flex items-center justify-center mb-5">
-              <GraduationCap size={20} className="text-white" />
-            </div>
-            <h3 className="text-lg font-bold font-heading mb-4">Education</h3>
-            <div className="space-y-4">
-              {educationData.map((edu) => (
-                <div key={edu.institution}>
-                  <h4 className="text-sm font-semibold">{edu.institution}</h4>
-                  <p className="text-xs text-text-secondary mt-0.5">{edu.degree}</p>
-                  <p className="text-[11px] text-primary font-medium mt-0.5">{edu.period}</p>
-                  {edu.details.map((d) => (
-                    <p key={d.label} className="text-xs text-text mt-1">
-                      {d.label}: <span className="font-semibold gradient-text">{d.value}</span>
-                    </p>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </motion.div>
+          {cards.map((card, i) => (
+            <motion.div
+              key={card.title}
+              initial={{ opacity: 0, y: 30 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
+              className="p-7 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-lg transition-all duration-300"
+            >
+              <div className="w-11 h-11 rounded-xl gradient-bg flex items-center justify-center mb-5">
+                <card.icon size={20} className="text-white" />
+              </div>
+              <h3 className="text-lg font-bold font-heading mb-4">{card.title}</h3>
+              <div className="text-sm text-text-secondary leading-relaxed">
+                {card.content}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
