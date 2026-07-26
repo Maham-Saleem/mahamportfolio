@@ -15,10 +15,7 @@ export const mobileNavLinks = [
   { label: 'About', href: '#about' },
   { label: 'Tech Stack', href: '#tech-stack' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Process', href: '#services' },
   { label: 'Experience', href: '#experience' },
-  { label: 'Certifications', href: '#certifications' },
-  { label: 'Achievements', href: '#achievements' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -77,193 +74,81 @@ export const techData: TechCategory[] = [
   },
 ];
 
-export const educationData = [
-  {
-    institution: 'Capital University of Science and Technology (CUST)',
-    degree: 'Bachelor of Software Engineering',
-    period: 'Expected Graduation 2028',
-    details: [{ label: 'CGPA', value: '3.95 / 4.00' }],
-  },
-  {
-    institution: 'Punjab College',
-    degree: 'Intermediate (FSc Pre-Engineering)',
-    period: 'Graduated 2024',
-    details: [{ label: 'Marks', value: '1064 / 1200' }],
-  },
-  {
-    institution: 'Capital Public School',
-    degree: 'Matriculation',
-    period: 'Graduated 2022',
-    details: [{ label: 'Marks', value: '1018 / 1100' }],
-  },
-];
-
 export interface Project {
   slug: string;
   title: string;
   category: string;
   description: string;
+  challenges: string[];
   features: string[];
   tags: string[];
   github: string;
   demo?: string;
   gradient: string;
   image?: string;
-  type: 'featured' | 'additional';
-  techDetail?: string;
 }
 
 export const projectsData: Project[] = [
-  {
-    slug: 'maham-clothing-store',
-    title: 'Maham Clothing Store',
-    category: 'Responsive E-Commerce Website',
-    description:
-      'A modern and responsive fashion e-commerce website designed to provide a premium online shopping experience. The website includes user authentication, shopping cart, wishlist, checkout flow, account management, and a mobile-friendly interface.',
-    features: [
-      'User Authentication',
-      'Shopping Cart',
-      'Wishlist',
-      'Checkout Flow',
-      'Responsive Design',
-      'Premium UI',
-      'Mobile Optimised',
-      'Product Catalogue',
-      'Account Management',
-    ],
-    tags: ['React', 'JavaScript', 'Tailwind CSS', 'Vite'],
-    github: 'https://github.com/Maham-Saleem/mahamstore',
-    demo: 'https://mahamstore.vercel.app/',
-    gradient: 'from-pink-500 to-rose-500',
-    image: '/images/mahamstore.png',
-    type: 'featured',
-  },
-  {
-    slug: 'smars-perfume-store',
-    title: "SMAR's Perfume Store",
-    category: 'Luxury Perfume Store',
-    description:
-      'A luxury perfume e-commerce frontend developed using HTML, CSS and PHP. The project focuses on elegant product presentation, responsive layouts and a premium shopping experience.',
-    features: [
-      'Responsive Layout',
-      'Product Catalogue',
-      'Elegant UI',
-      'Shopping Interface',
-      'Modern Design',
-    ],
-    tags: ['HTML5', 'CSS3', 'PHP', 'MySQL'],
-    github: 'https://github.com/Maham-Saleem/smars',
-    demo: 'https://smars-iota.vercel.app/',
-    gradient: 'from-emerald-500 to-teal-500',
-    image: '/images/smars.png',
-    type: 'featured',
-  },
-  {
-    slug: 'brew-and-bean',
-    title: 'Brew & Bean Coffee House',
-    category: 'Responsive Coffee Shop Website',
-    description:
-      'A modern coffee shop website featuring elegant UI design, responsive layouts, interactive menu browsing and an engaging user experience.',
-    features: [
-      'Responsive Design',
-      'Interactive Menu',
-      'Category Filtering',
-      'Beautiful UI',
-      'Contact Section',
-      'Gallery',
-      'Mobile Optimised',
-    ],
-    tags: ['React', 'JavaScript', 'Tailwind CSS', 'Vite'],
-    github: 'https://github.com/Maham-Saleem/brewandbean',
-    demo: 'https://brewandbean-seven.vercel.app/',
-    gradient: 'from-amber-500 to-orange-500',
-    image: '/images/brew-and-bean.png',
-    type: 'featured',
-  },
   {
     slug: 'parima',
     title: 'Parima',
     category: 'Community Opportunities Platform',
     description:
-      'A responsive web platform connecting users with job opportunities, volunteering opportunities and local events. The platform supports authentication, applications, user profiles, ratings, saved opportunities and secure contact management.',
+      'A responsive web platform connecting users with job opportunities, volunteering events and local activities. Built with React, TypeScript and Supabase, featuring real-time updates, user authentication, and a full role-based access system.',
+    challenges: [
+      'Designed a real-time database schema in PostgreSQL with row-level security for multi-tenant data isolation.',
+      'Implemented role-based access control with distinct views for students, organisers, and administrators.',
+      'Built a private messaging system with contact management features while maintaining data privacy.',
+    ],
     features: [
-      'Authentication',
-      'User Roles',
-      'Opportunity Listings',
-      'Applications',
+      'Authentication & User Roles',
+      'Opportunity Listings with Filters',
+      'Application Tracking',
       'Saved Opportunities',
-      'User Profiles',
-      'Ratings',
+      'User Profiles with Ratings',
       'Private Contact Management',
-      'Real-Time Updates',
+      'Real-Time Database Updates',
     ],
     tags: ['React', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS'],
     github: 'https://github.com/Maham-Saleem/parima',
     demo: 'https://parima-chi.vercel.app/',
     gradient: 'from-purple-500 to-indigo-500',
     image: '/images/parima.png',
-    type: 'featured',
-    techDetail: 'Database: PostgreSQL (Supabase). Languages: TypeScript, SQL, PL/pgSQL. Frontend: React 18, Vite 5, Tailwind CSS, shadcn/ui. Backend: Supabase.',
   },
   {
-    slug: 'weather-forecasting-system',
-    title: 'Weather Forecasting System',
-    category: 'C++ Application',
+    slug: 'maham-clothing-store',
+    title: 'Maham Clothing Store',
+    category: 'Responsive E-Commerce Website',
     description:
-      'A C++ application that integrates a weather API to retrieve real-time weather data, parse JSON responses and display weather forecasts.',
-    features: [],
-    tags: ['C++', 'REST API', 'JSON'],
-    github: 'https://github.com/Maham-Saleem/Weather-Forecasting-System',
-    gradient: 'from-blue-500 to-cyan-500',
-    type: 'additional',
-  },
-  {
-    slug: 'disaster-evacuation-system',
-    title: 'Disaster Evacuation System',
-    category: 'C++ Application',
-    description:
-      'A C++ application that integrates mapping APIs to determine the shortest and safest evacuation route during emergencies.',
-    features: [],
-    tags: ['C++', 'OpenRouteService API', 'JSON'],
-    github: 'https://github.com/Maham-Saleem/Disaster-Evacuation-System',
-    gradient: 'from-red-500 to-purple-500',
-    type: 'additional',
-  },
-  {
-    slug: 'banking-system',
-    title: 'Banking System',
-    category: 'C++ Application',
-    description:
-      'A banking system prototype demonstrating deposits, withdrawals, interest calculations and transaction management using object-oriented programming and file handling.',
-    features: [],
-    tags: ['C++', 'OOP', 'File Handling'],
-    github: 'https://github.com/Maham-Saleem/Codealpha_Bankingsystem',
-    gradient: 'from-teal-500 to-cyan-500',
-    type: 'additional',
-  },
-  {
-    slug: 'hotel-room-reservation-system',
-    title: 'Hotel Room Reservation System',
-    category: 'C++ Application',
-    description:
-      'A hotel reservation system simulation developed using object-oriented programming concepts to understand backend system behaviour.',
-    features: [],
-    tags: ['C++', 'OOP', 'File Handling'],
-    github: 'https://github.com/Maham-Saleem/Hotel-Room-Reservation-System',
-    gradient: 'from-blue-600 to-violet-500',
-    type: 'additional',
+      'A modern fashion e-commerce website built with React and Tailwind CSS. Features a complete shopping experience including product catalogues, cart management, wishlist, checkout flow, and account management — all wrapped in a premium, mobile-first interface.',
+    challenges: [
+      'Orchestrated a multi-step checkout flow with form validation and state persistence across page navigation.',
+      'Built a responsive product grid with dynamic filtering and sorting that performs smoothly across devices.',
+      'Implemented a wishlist and shopping cart system with local storage persistence for seamless user experience.',
+    ],
+    features: [
+      'User Authentication',
+      'Shopping Cart with Persistence',
+      'Wishlist Management',
+      'Multi-Step Checkout',
+      'Product Catalogue with Filters',
+      'Responsive & Mobile-Optimised',
+      'Premium UI Design',
+      'Account Dashboard',
+    ],
+    tags: ['React', 'JavaScript', 'Tailwind CSS', 'Vite'],
+    github: 'https://github.com/Maham-Saleem/mahamstore',
+    demo: 'https://mahamstore.vercel.app/',
+    gradient: 'from-pink-500 to-rose-500',
+    image: '/images/mahamstore.png',
   },
 ];
-
-export const featuredProjects = projectsData.filter((p) => p.type === 'featured');
-export const additionalProjects = projectsData.filter((p) => p.type === 'additional');
 
 export interface ExperienceItem {
   title: string;
   organization: string;
   period: string;
-  responsibilities: string[];
-  type: 'internship' | 'leadership';
+  description: string;
 }
 
 export const experienceData: ExperienceItem[] = [
@@ -271,55 +156,43 @@ export const experienceData: ExperienceItem[] = [
     title: 'Started Software Engineering at CUST',
     organization: 'Capital University of Science and Technology',
     period: '2024',
-    responsibilities: [
-      'Built strong programming fundamentals in C++ and software engineering.',
-    ],
-    type: 'internship',
+    description: 'Built strong programming fundamentals in C++ and software engineering principles.',
   },
   {
     title: "Chancellor's Honour Scholarship",
     organization: 'Capital University of Science and Technology',
     period: '2024 - 2025',
-    responsibilities: [
-      'Maintained outstanding academic performance (CGPA 3.95 / 4.00).',
-    ],
-    type: 'internship',
+    description: 'Maintained outstanding academic performance with a CGPA of 3.95 / 4.00.',
   },
   {
     title: 'Volunteering Head',
     organization: 'CAUSE Society (CUST)',
     period: '2025',
-    responsibilities: [
-      'Organised events and developed leadership and teamwork skills.',
-    ],
-    type: 'leadership',
+    description: 'Organised events and developed leadership and teamwork skills while managing a team of volunteers.',
   },
   {
     title: 'AWS Student Builder Programme',
     organization: 'AWS Cloud Core Team',
     period: '2025',
-    responsibilities: [
-      'Selected for AWS Cloud Core Team and expanded cloud development knowledge.',
-    ],
-    type: 'leadership',
+    description: 'Selected for the AWS Cloud Core Team, gaining hands-on experience with cloud infrastructure and services.',
   },
   {
-    title: 'Frontend Development Journey',
-    organization: 'Self-directed',
+    title: 'Deloitte Technology Job Simulation',
+    organization: 'Forage',
+    period: '2025',
+    description: 'Completed a simulated technology consulting project focused on client needs, technical analysis, and solution design.',
+  },
+  {
+    title: 'CodeAlpha Internship',
+    organization: 'CodeAlpha',
+    period: '2025',
+    description: 'Built C++ console-based projects applying object-oriented programming, data handling, and project management.',
+  },
+  {
+    title: 'Built Multiple Responsive Web Applications',
+    organization: 'Freelance & Personal Projects',
     period: '2025 - 2026',
-    responsibilities: [
-      'Built responsive websites using HTML, CSS, JavaScript, React and Tailwind CSS.',
-    ],
-    type: 'internship',
-  },
-  {
-    title: 'Portfolio & Client Projects',
-    organization: 'Freelance',
-    period: '2026',
-    responsibilities: [
-      'Designed and developed multiple responsive business websites and modern web interfaces.',
-    ],
-    type: 'internship',
+    description: 'Designed and developed modern web interfaces using React, Tailwind CSS, TypeScript, and responsive design principles.',
   },
 ];
 
@@ -327,16 +200,15 @@ export interface Certification {
   title: string;
   issuer: string;
   year?: string;
-  featured?: boolean;
 }
 
 export const certificationsData: Certification[] = [
-  { title: "Chancellor's Honorship Certificate", issuer: 'Capital University of Science and Technology', year: 'Spring 2025', featured: true },
-  { title: 'AWS Cloud Core Team Badge', issuer: 'AWS Student Builder Group (CUST)', year: '2026', featured: true },
-  { title: 'Deloitte Australia Technology Job Simulation', issuer: 'Forage', featured: true },
-  { title: 'CodeAlpha C++ Programming Internship Certificate', issuer: 'CodeAlpha', featured: true },
-  { title: 'Volunteering Head Certificate', issuer: 'CAUSE Society (CUST)', featured: true },
-  { title: '65 Hours Community Service Certificate', issuer: 'PGGA', year: '2026', featured: true },
+  { title: "Chancellor's Honorship Certificate", issuer: 'Capital University of Science and Technology', year: 'Spring 2025' },
+  { title: 'AWS Cloud Core Team Badge', issuer: 'AWS Student Builder Group (CUST)', year: '2026' },
+  { title: 'Deloitte Australia Technology Job Simulation', issuer: 'Forage' },
+  { title: 'CodeAlpha C++ Programming Internship Certificate', issuer: 'CodeAlpha' },
+  { title: 'Volunteering Head Certificate', issuer: 'CAUSE Society (CUST)' },
+  { title: '65 Hours Community Service Certificate', issuer: 'PGGA', year: '2026' },
   { title: "Chancellor's Honorship Certificate", issuer: 'Capital University of Science and Technology', year: 'Fall 2024' },
   { title: 'Business Analysis and Project Management', issuer: 'Coursera' },
   { title: 'Web Development with WordPress', issuer: 'Coursera' },
@@ -345,16 +217,7 @@ export const certificationsData: Certification[] = [
   { title: 'Proctorship Certificate', issuer: 'Punjab College' },
 ];
 
-export const featuredCertifications = certificationsData.filter((c) => c.featured);
-
-export const achievementsData = [
-  { label: 'CGPA', value: '3.95 / 4.00' },
-  { label: 'AWS Cloud Core Team Member' },
-  { label: 'Volunteering Head – CAUSE Society' },
-  { label: "Multiple Chancellor's Honorship Certificates" },
-  { label: 'CodeAlpha Virtual Internship' },
-  { label: '65 Hours Community Service' },
-];
+export const featuredCertifications = certificationsData.slice(0, 6);
 
 export const socialLinks = {
   email: 'mahamsaleem951@gmail.com',

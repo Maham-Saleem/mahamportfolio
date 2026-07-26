@@ -5,12 +5,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import TechStack from './components/TechStack';
 import Projects from './components/Projects';
-import Services from './components/Services';
 import Experience from './components/Experience';
-import Certifications from './components/Certifications';
-import Achievements from './components/Achievements';
-import Education from './components/Education';
-import WhyWorkWithMe from './components/WhyWorkWithMe';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
@@ -25,12 +20,7 @@ function HomePage() {
         <About />
         <TechStack />
         <Projects />
-        <Services />
         <Experience />
-        <Certifications />
-        <Achievements />
-        <Education />
-        <WhyWorkWithMe />
         <Contact />
       </main>
       <Footer />

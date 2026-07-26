@@ -1,12 +1,29 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { ArrowUpRight } from 'lucide-react';
+import { GraduationCap, Code2, Award } from 'lucide-react';
 
-const highlights = [
-  { label: 'CGPA', value: '3.95 / 4.00' },
-  { label: 'Projects', value: '6+ Built' },
-  { label: 'Certificates', value: '12+ Earned' },
-  { label: 'AWS', value: 'Cloud Core Team' },
+const infoCards = [
+  {
+    icon: GraduationCap,
+    title: 'Education',
+    items: [
+      { label: 'Software Engineering', sub: 'Capital University of Science & Technology' },
+    ],
+  },
+  {
+    icon: Code2,
+    title: 'Current Focus',
+    items: [
+      { label: 'Frontend Development', sub: 'React \u2022 Tailwind \u2022 Modern UI' },
+    ],
+  },
+  {
+    icon: Award,
+    title: 'Academic Achievement',
+    items: [
+      { label: 'CGPA 3.95 / 4.00', sub: 'Chancellor\'s Honours' },
+    ],
+  },
 ];
 
 export default function About() {
@@ -15,8 +32,7 @@ export default function About() {
   return (
     <section id="about" className="py-16 md:py-24 relative">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-secondary/4 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/4 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/4 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
@@ -28,8 +44,8 @@ export default function About() {
         >
           <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">About</span>
           <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold font-heading tracking-tight leading-[1.1]">
-            A developer who{' '}
-            <span className="gradient-text">builds with purpose</span>
+            Building with{' '}
+            <span className="gradient-text">purpose</span>
           </h2>
         </motion.div>
 
@@ -38,37 +54,22 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="lg:col-span-3 space-y-5"
+            className="lg:col-span-3 space-y-4"
           >
             <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
-              I'm Maham Saleem — a frontend web developer who turns ideas into clean, responsive, and
-              modern web experiences. I build websites that don't just look good but work well
-              across every device.
+              I'm a frontend developer who turns ideas into clean, responsive web experiences.
+              I focus on building interfaces that work well, look polished, and are built to last.
             </p>
-
             <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
-              My approach is straightforward: understand the goal, design with the user in mind,
-              and write code that's as maintainable as it is functional. Every project gets the
-              same attention to detail, whether it's a landing page or a full e-commerce interface.
+              I work with modern tools like React, TypeScript, and Tailwind CSS to create
+              everything from business websites to full e-commerce platforms. Every project
+              gets the same attention to detail — consistent spacing, thoughtful interactions,
+              and code that's easy to maintain.
             </p>
-
             <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
-              Right now I'm focused on deepening my skills with <strong className="text-text">React</strong>,{' '}
-              <strong className="text-text">TypeScript</strong>, and modern frontend tooling — building
-              production-quality applications while pursuing my Software Engineering degree at{' '}
-              <strong className="text-text">Capital University of Science and Technology</strong>.
+              I'm currently pursuing a Software Engineering degree at Capital University of
+              Science and Technology, where I maintain a CGPA of 3.95 / 4.00.
             </p>
-
-            <a
-              href="#projects"
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-secondary transition-colors mt-2"
-            >
-              See my work <ArrowUpRight size={14} />
-            </a>
           </motion.div>
 
           <motion.div
@@ -77,18 +78,28 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="lg:col-span-2 space-y-4"
           >
-            {highlights.map((item, i) => (
-              <motion.div
-                key={item.label}
-                initial={{ opacity: 0, x: 20 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.4, delay: 0.2 + i * 0.08 }}
-                className="p-5 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-md transition-all duration-300"
-              >
-                <p className="text-xs text-text-secondary font-medium tracking-wide uppercase">{item.label}</p>
-                <p className="text-lg sm:text-xl font-bold font-heading text-text mt-0.5">{item.value}</p>
-              </motion.div>
-            ))}
+            {infoCards.map((card) => {
+              const Icon = card.icon;
+              return (
+                <div
+                  key={card.title}
+                  className="p-5 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-md transition-all duration-300"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-9 h-9 rounded-xl bg-primary/5 text-primary flex items-center justify-center">
+                      <Icon size={17} />
+                    </div>
+                    <h3 className="text-sm font-semibold font-heading">{card.title}</h3>
+                  </div>
+                  {card.items.map((item) => (
+                    <div key={item.label}>
+                      <p className="text-sm font-medium">{item.label}</p>
+                      <p className="text-xs text-text-secondary mt-0.5">{item.sub}</p>
+                    </div>
+                  ))}
+                </div>
+              );
+            })}
           </motion.div>
         </div>
       </div>
