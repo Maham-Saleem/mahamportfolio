@@ -155,7 +155,7 @@ export default function Projects() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 });
 
   return (
-    <section id="projects" className="py-20 md:py-28 relative">
+    <section id="projects" className="py-16 md:py-24 relative">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-96 h-96 bg-secondary/4 rounded-full blur-3xl" />
       </div>
@@ -186,7 +186,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-24"
+          className="mt-16"
         >
           <h3 className="text-xl font-bold font-heading mb-2">Additional Projects</h3>
           <p className="text-sm text-text-secondary mb-8">
