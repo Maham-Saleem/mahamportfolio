@@ -119,14 +119,18 @@ function AdditionalCard({ project, index, inView }: { project: typeof additional
       transition={{ duration: 0.4, delay: 0.1 + index * 0.06 }}
       className="group relative rounded-2xl bg-card border border-border overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
     >
-      <div className={`h-28 bg-gradient-to-br ${project.gradient} flex items-center justify-center`}>
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl px-3 py-2 border border-white/15">
-          <span className="text-white/70 text-xs font-medium">{project.title.split(' ').slice(0, 2).join(' ')}</span>
+      <Link to={`/project/${project.slug}`}>
+        <div className={`h-28 bg-gradient-to-br ${project.gradient} flex items-center justify-center`}>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl px-3 py-2 border border-white/15">
+            <span className="text-white/70 text-xs font-medium">{project.title.split(' ').slice(0, 2).join(' ')}</span>
+          </div>
         </div>
-      </div>
+      </Link>
 
       <div className="p-4">
-        <h4 className="text-sm font-bold font-heading">{project.title}</h4>
+        <Link to={`/project/${project.slug}`}>
+          <h4 className="text-sm font-bold font-heading group-hover:text-primary transition-colors">{project.title}</h4>
+        </Link>
         <p className="mt-1 text-xs text-text-secondary leading-relaxed line-clamp-2">
           {project.description}
         </p>
@@ -145,6 +149,7 @@ function AdditionalCard({ project, index, inView }: { project: typeof additional
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-[11px] font-medium text-text-secondary hover:text-primary transition-colors"
+            onClick={(e) => e.stopPropagation()}
           >
             <GithubIcon size={12} />
             GitHub
