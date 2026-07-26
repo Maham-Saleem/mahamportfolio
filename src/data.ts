@@ -187,6 +187,7 @@ export const projectsData: Project[] = [
     github: 'https://github.com/Maham-Saleem/brewandbean',
     demo: 'https://brewandbean-seven.vercel.app/',
     gradient: 'from-amber-500 to-orange-500',
+    image: '/images/brew-and-bean.png',
     type: 'featured',
   },
   {
