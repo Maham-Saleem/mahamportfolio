@@ -9,7 +9,7 @@ const cards = [
     content: (
       <>
         <p>I am Maham Saleem, a Software Engineering student at Capital University of Science and Technology (CUST).</p>
-        <p className="mt-3">I currently have a CGPA of <strong className="text-text">3.94/4.00</strong>.</p>
+        <p className="mt-3">I currently have a CGPA of <strong className="text-text">3.95/4.00</strong>.</p>
         <p className="mt-3">I enjoy building responsive, elegant, and user-friendly websites that combine clean design with excellent user experience.</p>
       </>
     ),

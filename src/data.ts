@@ -85,7 +85,7 @@ export const educationData = [
     institution: 'Capital University of Science and Technology (CUST)',
     degree: 'Bachelor of Software Engineering',
     period: 'Expected Graduation 2028',
-    details: [{ label: 'CGPA', value: '3.94 / 4.00' }],
+    details: [{ label: 'CGPA', value: '3.95 / 4.00' }],
   },
   {
     institution: 'Punjab College',
