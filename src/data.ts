@@ -100,60 +100,160 @@ export const educationData = [
   },
 ];
 
-export const projectsData = [
+export interface Project {
+  slug: string;
+  title: string;
+  category: string;
+  description: string;
+  features: string[];
+  tags: string[];
+  github: string;
+  demo?: string;
+  gradient: string;
+  type: 'featured' | 'additional';
+  techDetail?: string;
+}
+
+export const projectsData: Project[] = [
   {
+    slug: 'maham-clothing-store',
     title: 'Maham Clothing Store',
+    category: 'Responsive E-Commerce Website',
     description:
-      'A modern responsive e-commerce website featuring secure authentication, wishlist functionality, shopping cart, checkout flow, account management, and a premium shopping experience. Designed with a strong focus on usability, performance, and mobile responsiveness.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
+      'A modern and responsive fashion e-commerce website designed to provide a premium online shopping experience. The website includes user authentication, shopping cart, wishlist, checkout flow, account management, and a mobile-friendly interface.',
+    features: [
+      'User Authentication',
+      'Shopping Cart',
+      'Wishlist',
+      'Checkout Flow',
+      'Responsive Design',
+      'Premium UI',
+      'Mobile Optimised',
+      'Product Catalogue',
+      'Account Management',
+    ],
+    tags: ['React', 'JavaScript', 'Tailwind CSS', 'Vite'],
     github: 'https://github.com/Maham-Saleem/mahamstore',
     demo: 'https://mahamstore.vercel.app/',
     gradient: 'from-pink-500 to-rose-500',
+    type: 'featured',
   },
   {
-    title: 'Parima – Community Opportunities Platform',
+    slug: 'parima',
+    title: 'Parima',
+    category: 'Community Opportunities Platform',
     description:
-      'A full-featured community opportunities platform connecting users with jobs, volunteering opportunities, and local events. Built with React, TypeScript, Supabase, PostgreSQL, and modern frontend technologies while supporting authentication, user roles, applications, profiles, ratings, and real-time updates.',
-    tags: ['React', 'TypeScript', 'Supabase', 'PostgreSQL'],
+      'A responsive web platform connecting users with job opportunities, volunteering opportunities and local events. The platform supports authentication, applications, user profiles, ratings, saved opportunities and secure contact management.',
+    features: [
+      'Authentication',
+      'User Roles',
+      'Opportunity Listings',
+      'Applications',
+      'Saved Opportunities',
+      'User Profiles',
+      'Ratings',
+      'Private Contact Management',
+      'Real-Time Updates',
+    ],
+    tags: ['React', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS'],
     github: 'https://github.com/Maham-Saleem/parima',
     demo: 'https://parima-chi.vercel.app/',
     gradient: 'from-purple-500 to-indigo-500',
+    type: 'featured',
+    techDetail: 'Database: PostgreSQL (Supabase). Languages: TypeScript, SQL, PL/pgSQL. Frontend: React 18, Vite 5, Tailwind CSS, shadcn/ui. Backend: Supabase.',
   },
   {
+    slug: 'brew-and-bean',
     title: 'Brew & Bean Coffee House',
+    category: 'Responsive Coffee Shop Website',
     description:
-      'A modern coffee shop website designed with an elegant user interface, interactive menu browsing, category filtering, responsive layouts, and a seamless ordering experience suitable for cafes and restaurants.',
-    tags: ['React', 'TypeScript', 'Tailwind CSS'],
+      'A modern coffee shop website featuring elegant UI design, responsive layouts, interactive menu browsing and an engaging user experience.',
+    features: [
+      'Responsive Design',
+      'Interactive Menu',
+      'Category Filtering',
+      'Beautiful UI',
+      'Contact Section',
+      'Gallery',
+      'Mobile Optimised',
+    ],
+    tags: ['React', 'JavaScript', 'Tailwind CSS', 'Vite'],
     github: 'https://github.com/Maham-Saleem/brewandbean',
     demo: 'https://brewandbean-seven.vercel.app/',
     gradient: 'from-amber-500 to-orange-500',
+    type: 'featured',
   },
   {
+    slug: 'smars-perfume-store',
     title: "SMAR's Perfume Store",
+    category: 'Luxury Perfume Store',
     description:
-      'A luxury perfume e-commerce frontend developed using HTML, CSS, and PHP, featuring elegant product displays, responsive layouts, intuitive navigation, and a premium shopping interface.',
-    tags: ['HTML', 'CSS', 'PHP'],
+      'A luxury perfume e-commerce frontend developed using HTML, CSS and PHP. The project focuses on elegant product presentation, responsive layouts and a premium shopping experience.',
+    features: [
+      'Responsive Layout',
+      'Product Catalogue',
+      'Elegant UI',
+      'Shopping Interface',
+      'Modern Design',
+    ],
+    tags: ['HTML5', 'CSS3', 'PHP', 'MySQL'],
     github: 'https://github.com/Maham-Saleem/smars',
     demo: 'https://smars-iota.vercel.app/',
     gradient: 'from-emerald-500 to-teal-500',
+    type: 'featured',
   },
   {
+    slug: 'weather-forecasting-system',
     title: 'Weather Forecasting System',
+    category: 'C++ Application',
     description:
-      'A C++ application that integrates a weather API to retrieve live weather information, parse JSON data, and display real-time forecasts, demonstrating API integration and backend programming concepts.',
-    tags: ['C++', 'API Integration', 'JSON', 'OOP'],
+      'A C++ application that integrates a weather API to retrieve real-time weather data, parse JSON responses and display weather forecasts.',
+    features: [],
+    tags: ['C++', 'REST API', 'JSON'],
     github: 'https://github.com/Maham-Saleem/Weather-Forecasting-System',
     gradient: 'from-blue-500 to-cyan-500',
+    type: 'additional',
   },
   {
+    slug: 'disaster-evacuation-system',
     title: 'Disaster Evacuation System',
+    category: 'C++ Application',
     description:
-      'A route planning application that uses mapping APIs to determine the shortest and safest evacuation path during emergencies, demonstrating algorithmic problem solving and API integration.',
-    tags: ['C++', 'Mapping API', 'Algorithms', 'Graph Theory'],
+      'A C++ application that integrates mapping APIs to determine the shortest and safest evacuation route during emergencies.',
+    features: [],
+    tags: ['C++', 'OpenRouteService API', 'JSON'],
     github: 'https://github.com/Maham-Saleem/Disaster-Evacuation-System',
     gradient: 'from-red-500 to-purple-500',
+    type: 'additional',
+  },
+  {
+    slug: 'banking-system',
+    title: 'Banking System',
+    category: 'C++ Application',
+    description:
+      'A banking system prototype demonstrating deposits, withdrawals, interest calculations and transaction management using object-oriented programming and file handling.',
+    features: [],
+    tags: ['C++', 'OOP', 'File Handling'],
+    github: 'https://github.com/Maham-Saleem/Codealpha_Bankingsystem',
+    gradient: 'from-teal-500 to-cyan-500',
+    type: 'additional',
+  },
+  {
+    slug: 'hotel-room-reservation-system',
+    title: 'Hotel Room Reservation System',
+    category: 'C++ Application',
+    description:
+      'A hotel reservation system simulation developed using object-oriented programming concepts to understand backend system behaviour.',
+    features: [],
+    tags: ['C++', 'OOP', 'File Handling'],
+    github: 'https://github.com/Maham-Saleem/Hotel-Room-Reservation-System',
+    gradient: 'from-blue-600 to-violet-500',
+    type: 'additional',
   },
 ];
+
+export const featuredProjects = projectsData.filter((p) => p.type === 'featured');
+export const additionalProjects = projectsData.filter((p) => p.type === 'additional');
 
 export const socialLinks = {
   email: 'mahamsaleem951@gmail.com',
