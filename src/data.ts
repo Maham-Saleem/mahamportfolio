@@ -118,6 +118,7 @@ export interface Project {
   github: string;
   demo?: string;
   gradient: string;
+  image?: string;
   type: 'featured' | 'additional';
   techDetail?: string;
 }
@@ -144,6 +145,7 @@ export const projectsData: Project[] = [
     github: 'https://github.com/Maham-Saleem/mahamstore',
     demo: 'https://mahamstore.vercel.app/',
     gradient: 'from-pink-500 to-rose-500',
+    image: '/images/mahamstore.png',
     type: 'featured',
   },
   {

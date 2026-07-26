@@ -28,7 +28,11 @@ function FeaturedCard({ project, index, inView }: { project: typeof featuredProj
     >
       <Link to={`/project/${project.slug}`} className="block">
         <div className="relative h-56 sm:h-64 overflow-hidden">
-          <ProjectPlaceholder title={project.title} gradient={project.gradient} />
+          {project.image ? (
+            <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+          ) : (
+            <ProjectPlaceholder title={project.title} gradient={project.gradient} />
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent" />
           <div className="absolute top-4 left-4">
             <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-[11px] font-medium text-white border border-white/15">
