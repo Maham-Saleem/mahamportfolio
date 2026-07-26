@@ -142,6 +142,56 @@ export const projectsData: Project[] = [
     gradient: 'from-pink-500 to-rose-500',
     image: '/images/mahamstore.png',
   },
+  {
+    slug: 'smars-perfume-store',
+    title: "SMAR's Perfume Store",
+    category: 'Luxury Perfume Store',
+    description:
+      'A luxury perfume e-commerce frontend built with HTML, CSS and PHP. Features elegant product presentation, responsive layouts and a premium shopping experience.',
+    challenges: [
+      'Designed a visually immersive product catalogue showcasing perfumes with detailed descriptions and pricing.',
+      'Built a responsive layout that maintains elegance across mobile, tablet and desktop viewports.',
+      'Integrated a PHP backend with MySQL for product management and dynamic content rendering.',
+    ],
+    features: [
+      'Responsive Layout',
+      'Product Catalogue',
+      'Elegant UI',
+      'Shopping Interface',
+      'Modern Design',
+    ],
+    tags: ['HTML5', 'CSS3', 'PHP', 'MySQL'],
+    github: 'https://github.com/Maham-Saleem/smars',
+    demo: 'https://smars-iota.vercel.app/',
+    gradient: 'from-emerald-500 to-teal-500',
+    image: '/images/smars.png',
+  },
+  {
+    slug: 'brew-and-bean',
+    title: 'Brew & Bean Coffee House',
+    category: 'Responsive Coffee Shop Website',
+    description:
+      'A modern coffee shop website designed with React and Tailwind CSS, featuring elegant UI design, responsive layouts, interactive menu browsing and an engaging user experience.',
+    challenges: [
+      'Crafted a warm, inviting visual identity with custom color palettes and typography that reflects the coffee brand.',
+      'Implemented interactive menu browsing with category filtering for a seamless customer experience.',
+      'Ensured pixel-perfect responsive design across all device sizes with smooth animations and transitions.',
+    ],
+    features: [
+      'Responsive Design',
+      'Interactive Menu',
+      'Category Filtering',
+      'Beautiful UI',
+      'Contact Section',
+      'Gallery',
+      'Mobile Optimised',
+    ],
+    tags: ['React', 'JavaScript', 'Tailwind CSS', 'Vite'],
+    github: 'https://github.com/Maham-Saleem/brewandbean',
+    demo: 'https://brewandbean-seven.vercel.app/',
+    gradient: 'from-amber-500 to-orange-500',
+    image: '/images/brew-and-bean.png',
+  },
 ];
 
 export interface ExperienceItem {
