@@ -136,8 +136,12 @@ export default function ProjectCaseStudy() {
                   to={`/project/${rp.slug}`}
                   className="p-5 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-lg transition-all duration-300 group"
                 >
-                  <div className={`h-32 rounded-xl bg-gradient-to-br ${rp.gradient} flex items-center justify-center mb-4`}>
-                    <span className="text-white/70 font-bold text-lg">{rp.title.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase()}</span>
+                  <div className={`h-32 rounded-xl mb-4 relative overflow-hidden ${rp.image ? '' : `bg-gradient-to-br ${rp.gradient} flex items-center justify-center`}`}>
+                    {rp.image ? (
+                      <img src={rp.image} alt={rp.title} className="w-full h-full object-cover" />
+                    ) : (
+                      <span className="text-white/70 font-bold text-lg">{rp.title.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase()}</span>
+                    )}
                   </div>
                   <h3 className="font-bold font-heading group-hover:text-primary transition-colors">{rp.title}</h3>
                   <p className="text-xs text-text-secondary mt-1 line-clamp-2">{rp.description}</p>
