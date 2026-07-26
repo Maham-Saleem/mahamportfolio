@@ -141,8 +141,8 @@ export default function ProjectCaseStudy() {
             transition={{ duration: 0.5, delay: 0.25 }}
             className="mt-16"
           >
-            <h2 className="text-lg font-bold font-heading mb-4">Other Project</h2>
-            <div className="grid sm:grid-cols-1 gap-5 max-w-md">
+            <h2 className="text-lg font-bold font-heading mb-4">Other Projects</h2>
+            <div className="grid sm:grid-cols-3 gap-5">
               {related.map((rp) => (
                 <Link
                   key={rp.slug}
