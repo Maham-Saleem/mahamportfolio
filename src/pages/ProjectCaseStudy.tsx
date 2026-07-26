@@ -33,8 +33,11 @@ export default function ProjectCaseStudy() {
 
   return (
     <div className="min-h-screen bg-bg">
-      <div className={`h-64 sm:h-80 md:h-96 bg-gradient-to-br ${project.gradient} relative flex items-center justify-center`}>
-        <div className="absolute inset-0 bg-black/10" />
+      <div className={`h-64 sm:h-80 md:h-96 relative flex items-center justify-center ${project.image ? '' : `bg-gradient-to-br ${project.gradient}`}`}>
+        {project.image ? (
+          <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
+        ) : null}
+        <div className="absolute inset-0 bg-black/40" />
         <div className="relative text-center">
           <div className="w-20 h-20 mx-auto rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mb-4">
             <span className="text-white font-bold text-2xl">
