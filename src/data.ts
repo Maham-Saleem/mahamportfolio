@@ -13,8 +13,8 @@ export const navLinks = [
 export const mobileNavLinks = [
   { label: 'Home', href: '#hero' },
   { label: 'About', href: '#about' },
-  { label: 'Tech Stack', href: '#tech-stack' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Tech Stack', href: '#tech-stack' },
   { label: 'Achievements', href: '#achievements' },
   { label: 'Contact', href: '#contact' },
 ];

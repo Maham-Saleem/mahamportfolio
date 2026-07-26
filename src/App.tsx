@@ -18,8 +18,8 @@ function HomePage() {
       <main>
         <Hero />
         <About />
-        <TechStack />
         <Projects />
+        <TechStack />
         <Achievements />
         <Contact />
       </main>
