@@ -21,13 +21,13 @@ function CertCard({ cert }: { cert: typeof certificationsData[0] }) {
   const icons = { academic: GraduationCap, professional: Award, leadership: Users };
   const Icon = icons[cert.category];
   return (
-    <div className="flex items-center gap-3 p-3 rounded-xl bg-card border border-border hover:border-primary/15 transition-all duration-300 group">
-      <div className="w-8 h-8 rounded-lg bg-primary/5 text-primary flex items-center justify-center shrink-0 group-hover:gradient-bg group-hover:text-white transition-all duration-300">
-        <Icon size={14} />
+    <div className="flex items-center gap-3.5 p-4 rounded-xl bg-card border border-border hover:border-primary/15 transition-all duration-300 group">
+      <div className="w-10 h-10 rounded-xl bg-primary/5 text-primary flex items-center justify-center shrink-0 group-hover:gradient-bg group-hover:text-white transition-all duration-300">
+        <Icon size={16} />
       </div>
       <div className="min-w-0 flex-1">
-        <p className="text-xs font-semibold leading-snug">{cert.title}</p>
-        <p className="text-[11px] text-text-secondary mt-0.5">{cert.issuer}</p>
+        <p className="text-sm font-semibold leading-snug">{cert.title}</p>
+        <p className="text-xs text-text-secondary mt-0.5">{cert.issuer}</p>
       </div>
     </div>
   );
@@ -75,7 +75,7 @@ export default function Achievements() {
                   </div>
                   <span className="text-sm font-bold font-heading">{cat.label}</span>
                 </div>
-                <div className="space-y-2.5">
+                <div className="space-y-3">
                   {cat.items.map((cert, i) => (
                     <CertCard key={`${cert.title}-${i}`} cert={cert} />
                   ))}
@@ -88,7 +88,7 @@ export default function Achievements() {
             initial={{ opacity: 0, y: 10 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.4, delay: 0.3 }}
-            className="mt-8"
+            className="mt-8 text-center"
           >
             <button
               onClick={() => setOpen(true)}
@@ -138,7 +138,7 @@ export default function Achievements() {
                       <span className="text-xs font-bold text-primary tracking-wide">{cat.label}</span>
                       <span className="text-[11px] text-text-secondary ml-auto">{cat.items.length} items</span>
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-3">
                       {cat.items.map((cert, i) => (
                         <CertCard key={`${cert.title}-${i}`} cert={cert} />
                       ))}
