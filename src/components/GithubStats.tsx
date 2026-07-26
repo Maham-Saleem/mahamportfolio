@@ -49,6 +49,15 @@ export default function GithubStats() {
             </div>
           </div>
 
+          <div className="w-full max-w-3xl rounded-2xl bg-card border border-border p-5 hover:shadow-lg transition-all duration-300">
+            <img
+              src={`https://ghchart.rshah.org/${username}`}
+              alt={`${username}'s GitHub contribution graph`}
+              className="w-full"
+              style={{ filter: 'saturate(1.2)' }}
+            />
+          </div>
+
           <a
             href={`https://github.com/${username}`}
             target="_blank"
