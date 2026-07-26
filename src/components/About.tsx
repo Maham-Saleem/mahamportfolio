@@ -55,7 +55,7 @@ export default function About() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="mt-14"
         >
-          <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
+          <p className="text-base sm:text-lg text-text-secondary leading-relaxed text-justify">
             I'm a Frontend Developer and Software Engineering student at Capital University
             of Science and Technology (CUST), maintaining a CGPA of 3.95/4.00. I specialise
             in building modern, responsive web applications with a strong focus on clean
