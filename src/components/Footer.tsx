@@ -6,15 +6,14 @@ export default function Footer() {
     <footer className="py-10 border-t border-border">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <span className="text-lg font-bold font-heading">
-              <span className="gradient-text">M</span>
-              <span className="text-text">aham</span>
-              <span className="gradient-text">.</span>
-            </span>
-            <span className="text-sm text-text-secondary">
-              &copy; {new Date().getFullYear()} All rights reserved.
-            </span>
+          <div className="text-center md:text-left">
+            <p className="font-bold font-heading text-lg">
+              <span className="gradient-text">Maham Saleem</span>
+            </p>
+            <p className="text-sm text-text-secondary">Frontend Web Developer</p>
+            <p className="text-xs text-text-secondary/60 mt-1">
+              &copy; {new Date().getFullYear()} Maham Saleem. Built with React & Tailwind CSS.
+            </p>
           </div>
 
           <div className="flex items-center gap-2">
