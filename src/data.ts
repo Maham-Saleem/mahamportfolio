@@ -313,7 +313,7 @@ export const certificationsData: Certification[] = [
 ];
 
 export const achievementsData = [
-  { label: 'CGPA', value: '3.94 / 4.00' },
+  { label: 'CGPA', value: '3.95 / 4.00' },
   { label: 'AWS Cloud Core Team Member' },
   { label: 'Volunteering Head – CAUSE Society' },
   { label: "Multiple Chancellor's Honorship Certificates" },
