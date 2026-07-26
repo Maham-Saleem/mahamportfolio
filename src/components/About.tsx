@@ -53,21 +53,15 @@ export default function About() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-14 space-y-4"
+          className="mt-14"
         >
           <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
-            I'm a frontend developer who turns ideas into clean, responsive web experiences.
-            I focus on building interfaces that work well, look polished, and are built to last.
-          </p>
-          <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
-            I work with modern tools like React, TypeScript, and Tailwind CSS to create
-            everything from business websites to full e-commerce platforms. Every project
-            gets the same attention to detail — consistent spacing, thoughtful interactions,
-            and code that's easy to maintain.
-          </p>
-          <p className="text-base sm:text-lg text-text-secondary leading-relaxed">
-            I'm currently pursuing a Software Engineering degree at Capital University of
-            Science and Technology, where I maintain a CGPA of 3.95 / 4.00.
+            I'm a Frontend Developer and Software Engineering student at Capital University
+            of Science and Technology (CUST), maintaining a CGPA of 3.95/4.00. I specialise
+            in building modern, responsive web applications with a strong focus on clean
+            design, intuitive user experiences, and maintainable code. Through academic
+            learning and real-world projects, I'm continually refining my skills while
+            creating digital products that are both functional and visually polished.
           </p>
         </motion.div>
 
