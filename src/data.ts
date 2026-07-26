@@ -1,12 +1,103 @@
+import { SiHtml5, SiCss, SiJavascript, SiReact, SiTailwindcss, SiTypescript, SiVite, SiPhp, SiMysql, SiPostgresql, SiSupabase, SiCplusplus, SiPython, SiGit, SiGithub, SiVercel, SiXampp, SiNotion } from 'react-icons/si';
+import { type IconType } from 'react-icons';
+import { Cpu, Database, Pen, Code2 } from 'lucide-react';
+
 export const navLinks = [
   { label: 'Home', href: '#hero' },
   { label: 'About', href: '#about' },
   { label: 'Tech Stack', href: '#tech-stack' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Services', href: '#services' },
   { label: 'Experience', href: '#experience' },
   { label: 'Certifications', href: '#certifications' },
   { label: 'GitHub', href: '#github' },
   { label: 'Contact', href: '#contact' },
+];
+
+interface TechItem {
+  name: string;
+  icon: IconType;
+}
+
+interface TechCategory {
+  category: string;
+  items: TechItem[];
+}
+
+export const techData: TechCategory[] = [
+  {
+    category: 'Frontend Development',
+    items: [
+      { name: 'HTML5', icon: SiHtml5 },
+      { name: 'CSS3', icon: SiCss },
+      { name: 'JavaScript', icon: SiJavascript },
+      { name: 'React', icon: SiReact },
+      { name: 'Tailwind CSS', icon: SiTailwindcss },
+      { name: 'TypeScript', icon: SiTypescript },
+      { name: 'Vite', icon: SiVite },
+    ],
+  },
+  {
+    category: 'Backend & Database',
+    items: [
+      { name: 'PHP', icon: SiPhp },
+      { name: 'MySQL', icon: SiMysql },
+      { name: 'PostgreSQL', icon: SiPostgresql },
+      { name: 'SQL', icon: Database },
+      { name: 'Supabase', icon: SiSupabase },
+    ],
+  },
+  {
+    category: 'Programming Languages',
+    items: [
+      { name: 'C++', icon: SiCplusplus },
+      { name: 'Python', icon: SiPython },
+    ],
+  },
+  {
+    category: 'Development Tools',
+    items: [
+      { name: 'Git', icon: SiGit },
+      { name: 'GitHub', icon: SiGithub },
+      { name: 'VS Code', icon: Code2 },
+      { name: 'Vercel', icon: SiVercel },
+      { name: 'XAMPP', icon: SiXampp },
+      { name: 'Notion', icon: SiNotion },
+      { name: 'Draw.io', icon: Pen },
+      { name: 'Packet Tracer', icon: Cpu },
+    ],
+  },
+];
+
+export const servicesList = [
+  'Responsive Website Development',
+  'Business Websites',
+  'Portfolio Websites',
+  'Landing Pages',
+  'E-commerce Frontend Development',
+  'UI Implementation',
+  'Website Redesign',
+];
+
+export const educationData = [
+  {
+    institution: 'Capital University of Science and Technology (CUST)',
+    degree: 'Bachelor of Software Engineering',
+    period: 'Expected Graduation 2028',
+    details: [{ label: 'CGPA', value: '3.94 / 4.00' }],
+  },
+  {
+    institution: 'Punjab College',
+    degree: 'Intermediate (FSc Pre-Engineering)',
+    period: 'Graduated 2024',
+    details: [{ label: 'Marks', value: '1064 / 1200' }],
+  },
+  {
+    institution: 'Capital Public School',
+    degree: 'Matriculation',
+    period: 'Graduated 2022',
+    details: [{ label: 'Marks', value: '1018 / 1100' }],
+  },
 ];
 
 export const projectsData = [
@@ -65,7 +156,8 @@ export const projectsData = [
 ];
 
 export const socialLinks = {
-  email: 'maham.saleem@email.com',
-  linkedin: 'https://linkedin.com/in/maham-saleem',
+  email: 'mahamsaleem951@gmail.com',
+  phone: '+92 335 0519119',
+  linkedin: 'https://www.linkedin.com/in/mahamsaleem0406',
   github: 'https://github.com/Maham-Saleem',
 };
