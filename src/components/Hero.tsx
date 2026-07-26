@@ -102,7 +102,7 @@ export default function Hero() {
             >
               <button
                 onClick={() => scrollTo('#projects')}
-                className="group px-8 py-3.5 gradient-bg text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2"
+                className="flex-1 min-w-[140px] group px-5 py-3.5 gradient-bg text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 View Projects
                 <ArrowDown size={16} className="group-hover:translate-y-0.5 transition-transform" />
@@ -110,14 +110,14 @@ export default function Hero() {
               <a
                 href="/Maham_Saleem_CV.pdf"
                 download
-                className="px-7 py-3.5 rounded-full font-medium border-2 border-border text-text-secondary hover:border-primary/30 hover:text-primary hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2"
+                className="flex-1 min-w-[140px] px-5 py-3.5 rounded-full font-medium border-2 border-border text-text-secondary hover:border-primary/30 hover:text-primary hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Download size={16} />
                 Download CV
               </a>
               <button
                 onClick={() => scrollTo('#contact')}
-                className="px-7 py-3.5 rounded-full font-medium border-2 border-border text-text-secondary hover:border-primary/30 hover:text-primary hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2"
+                className="flex-1 min-w-[140px] px-5 py-3.5 rounded-full font-medium border-2 border-border text-text-secondary hover:border-primary/30 hover:text-primary hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Mail size={16} />
                 Contact
