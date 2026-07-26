@@ -8,7 +8,6 @@ const infoCards = [
     title: 'Education',
     items: [
       { label: 'BSc Software Engineering', sub: 'Capital University of Science & Technology' },
-      { label: 'CGPA 3.95 / 4.00', sub: "Chancellor's Honours Scholar" },
     ],
   },
   {
