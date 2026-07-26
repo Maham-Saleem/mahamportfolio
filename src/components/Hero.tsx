@@ -1,12 +1,6 @@
 import { motion } from 'framer-motion';
-import { Download, ChevronRight, Mail, Code2, Sparkles, FileText, Smartphone, Palette, ShoppingBag } from 'lucide-react';
+import { ArrowDown, Code2, Sparkles } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './GithubIcon';
-
-const services = [
-  { icon: Smartphone, label: 'Web Applications' },
-  { icon: ShoppingBag, label: 'E-Commerce' },
-  { icon: Palette, label: 'UI/UX Design' },
-];
 
 export default function Hero() {
   const scrollTo = (id: string) => {
@@ -14,124 +8,129 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden"
+    >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-3xl" />
+        <div className="absolute -top-48 -right-48 w-[500px] h-[500px] bg-primary/4 rounded-full blur-3xl" />
+        <div className="absolute -bottom-48 -left-48 w-[500px] h-[500px] bg-secondary/4 rounded-full blur-3xl" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-accent/6 rounded-full blur-3xl animate-pulse-glow" />
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.5 }}
             >
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 text-primary rounded-full text-sm font-medium mb-6">
-                <Sparkles size={16} />
-                Full-Stack Web Developer
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/8 text-primary rounded-full text-sm font-medium border border-primary/15">
+                <Sparkles size={14} />
+                Available for freelance projects
               </span>
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-4"
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="mt-6 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold font-heading tracking-tight leading-[1.08]"
             >
-              Building <span className="gradient-text">Digital</span> Experiences That Drive Results
+              Crafting digital{' '}
+              <span className="gradient-text">experiences</span>
+              {' '}that drive results
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg sm:text-xl text-text-secondary mb-8 max-w-xl"
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mt-5 text-lg sm:text-xl text-text-secondary leading-relaxed max-w-xl"
             >
-              I'm <strong className="text-text">Maham Saleem</strong>, a full-stack web developer specializing in 
-              crafting modern, high-performance web applications, e-commerce platforms, and seamless user experiences 
-              using cutting-edge technologies.
+              I'm <strong className="text-text">Maham Saleem</strong> — a full-stack web developer who builds 
+              modern, high-performance web applications, e-commerce platforms, and seamless digital 
+              experiences that users love.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.25 }}
-              className="flex flex-wrap gap-3 mb-8"
-            >
-              {services.map((s) => (
-                <span key={s.label} className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-card border border-border text-sm font-medium text-text-secondary">
-                  <s.icon size={16} className="text-primary" />
-                  {s.label}
-                </span>
-              ))}
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-wrap gap-4"
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mt-8 flex flex-wrap gap-4"
             >
               <button
                 onClick={() => scrollTo('#projects')}
-                className="group inline-flex items-center gap-2 px-7 py-3.5 gradient-bg text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300"
+                className="group px-7 py-3.5 gradient-bg text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2"
               >
-                View My Work
-                <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                View Projects
+                <ArrowDown size={16} className="group-hover:translate-y-0.5 transition-transform" />
               </button>
               <button
                 onClick={() => scrollTo('#contact')}
-                className="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-primary/30 text-primary rounded-full font-medium hover:bg-primary hover:text-white hover:-translate-y-0.5 transition-all duration-300"
+                className="px-7 py-3.5 rounded-full font-medium border-2 border-border text-text-secondary hover:border-primary/30 hover:text-primary hover:-translate-y-0.5 transition-all duration-300"
               >
-                <Download size={18} />
-                Download Resume
+                Get in Touch
               </button>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex items-center gap-4 mt-8"
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mt-10 flex items-center gap-5"
             >
-              <a href="https://github.com/Maham-Saleem" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-card border border-border text-text-secondary hover:text-primary hover:border-primary hover:-translate-y-0.5 transition-all duration-300 shadow-sm hover:shadow-md">
-                <GithubIcon size={20} />
+              <a
+                href="https://github.com/Maham-Saleem"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl text-text-secondary hover:text-primary hover:bg-primary/5 transition-all duration-200"
+                aria-label="GitHub"
+              >
+                <GithubIcon size={22} />
               </a>
-              <a href="https://linkedin.com/in/maham-saleem" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-card border border-border text-text-secondary hover:text-primary hover:border-primary hover:-translate-y-0.5 transition-all duration-300 shadow-sm hover:shadow-md">
-                <LinkedinIcon size={20} />
+              <a
+                href="https://linkedin.com/in/maham-saleem"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl text-text-secondary hover:text-primary hover:bg-primary/5 transition-all duration-200"
+                aria-label="LinkedIn"
+              >
+                <LinkedinIcon size={22} />
               </a>
-              <a href="mailto:maham.saleem@email.com" className="p-3 rounded-full bg-card border border-border text-text-secondary hover:text-primary hover:border-primary hover:-translate-y-0.5 transition-all duration-300 shadow-sm hover:shadow-md">
-                <Mail size={20} />
+              <a
+                href="mailto:maham.saleem@email.com"
+                className="p-2.5 rounded-xl text-text-secondary hover:text-primary hover:bg-primary/5 transition-all duration-200"
+                aria-label="Email"
+              >
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
               </a>
             </motion.div>
           </div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative hidden md:flex items-center justify-center"
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="hidden lg:flex items-center justify-center"
           >
-            <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-              <div className="absolute inset-0 gradient-bg rounded-full opacity-10 animate-pulse" />
-              <div className="absolute inset-4 bg-accent/20 rounded-full" />
-              <div className="absolute inset-8 bg-card rounded-full shadow-xl flex items-center justify-center border border-border">
+            <div className="relative w-80 h-80 xl:w-96 xl:h-96">
+              <div className="absolute inset-0 gradient-bg rounded-[32px] opacity-8 rotate-6" />
+              <div className="absolute inset-3 bg-card rounded-[28px] border border-border shadow-xl flex items-center justify-center">
                 <div className="text-center">
-                  <Code2 size={64} className="text-primary mx-auto mb-2" />
-                  <span className="gradient-text font-bold text-2xl font-heading">&lt;/&gt;</span>
+                  <div className="w-20 h-20 mx-auto rounded-2xl gradient-bg flex items-center justify-center mb-4 shadow-lg">
+                    <Code2 size={40} className="text-white" />
+                  </div>
+                  <p className="text-sm text-text-secondary font-medium">Full-Stack Developer</p>
+                  <p className="text-xs text-text-secondary/60 mt-1">React · Node.js · TypeScript</p>
                 </div>
               </div>
-              <div className="absolute -top-4 -right-4 w-16 h-16 gradient-bg rounded-2xl rotate-12 flex items-center justify-center shadow-lg animate-float">
-                <Sparkles size={28} className="text-white" />
-              </div>
-              <div className="absolute -bottom-2 -left-4 w-14 h-14 bg-card border border-border rounded-xl shadow-md flex items-center justify-center animate-float" style={{ animationDelay: '1s' }}>
-                <FileText size={22} className="text-secondary" />
-              </div>
-              <div className="absolute top-4 -left-3 w-12 h-12 bg-card border border-border rounded-xl shadow-md flex items-center justify-center animate-float" style={{ animationDelay: '0.5s' }}>
-                <ShoppingBag size={20} className="text-primary" />
+              <div className="absolute -top-3 -right-3 w-14 h-14 rounded-2xl gradient-bg rotate-12 flex items-center justify-center shadow-lg animate-float">
+                <Sparkles size={24} className="text-white" />
               </div>
             </div>
           </motion.div>
