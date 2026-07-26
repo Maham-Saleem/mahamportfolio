@@ -278,16 +278,6 @@ export interface ExperienceItem {
 
 export const experienceData: ExperienceItem[] = [
   {
-    title: 'Virtual C++ Programming Intern',
-    organization: 'CodeAlpha',
-    period: 'July 2025 – August 2025',
-    responsibilities: [
-      'Built two console-based projects focusing on object-oriented programming and data handling.',
-      'Completed project-based tasks within deadlines in a remote development environment.',
-    ],
-    type: 'internship',
-  },
-  {
     title: 'AWS Cloud Core Team Member',
     organization: 'AWS Student Builder Group (CUST)',
     period: '',
@@ -300,6 +290,16 @@ export const experienceData: ExperienceItem[] = [
     period: '',
     responsibilities: [],
     type: 'leadership',
+  },
+  {
+    title: 'Virtual C++ Programming Intern',
+    organization: 'CodeAlpha',
+    period: 'July 2025 – August 2025',
+    responsibilities: [
+      'Built two console-based projects focusing on object-oriented programming and data handling.',
+      'Completed project-based tasks within deadlines in a remote development environment.',
+    ],
+    type: 'internship',
   },
 ];
 
