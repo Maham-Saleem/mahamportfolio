@@ -211,6 +211,7 @@ export const projectsData: Project[] = [
     github: 'https://github.com/Maham-Saleem/parima',
     demo: 'https://parima-chi.vercel.app/',
     gradient: 'from-purple-500 to-indigo-500',
+    image: '/images/parima.png',
     type: 'featured',
     techDetail: 'Database: PostgreSQL (Supabase). Languages: TypeScript, SQL, PL/pgSQL. Frontend: React 18, Vite 5, Tailwind CSS, shadcn/ui. Backend: Supabase.',
   },
