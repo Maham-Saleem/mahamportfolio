@@ -15,6 +15,10 @@ export default function TechStack() {
 
   return (
     <section id="tech-stack" className="py-16 md:py-24 relative">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/4 rounded-full blur-3xl" />
+      </div>
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -27,9 +31,12 @@ export default function TechStack() {
             Technologies I{' '}
             <span className="gradient-text">work with</span>
           </h2>
+          <p className="mt-4 text-text-secondary leading-relaxed">
+            The tools and languages I use to build modern web applications.
+          </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 gap-6 mt-16">
+        <div className="grid sm:grid-cols-2 gap-6 mt-14">
           {techData.map((category, i) => {
             const CatIcon = categoryIcons[category.category] || Code2;
             return (
@@ -38,28 +45,26 @@ export default function TechStack() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.15 + i * 0.1 }}
-                className="p-6 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-lg transition-all duration-300"
+                className="p-7 rounded-2xl bg-card border border-border hover:border-primary/20 hover:shadow-lg transition-all duration-300"
               >
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="w-9 h-9 rounded-xl gradient-bg flex items-center justify-center">
-                    <CatIcon size={16} className="text-white" />
+                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-border/60">
+                  <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center">
+                    <CatIcon size={18} className="text-white" />
                   </div>
-                  <h3 className="text-sm font-semibold">{category.category}</h3>
+                  <h3 className="text-sm font-semibold font-heading">{category.category}</h3>
                 </div>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                <div className="flex flex-wrap gap-3">
                   {category.items.map((item) => {
                     const Icon = item.icon;
                     return (
                       <div
                         key={item.name}
-                        className="flex items-center gap-2 p-2.5 rounded-xl bg-primary/3 hover:bg-primary/8 border border-transparent hover:border-primary/15 transition-all duration-200"
+                        className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-primary/3 hover:bg-primary/8 border border-transparent hover:border-primary/15 hover:-translate-y-0.5 transition-all duration-200"
                       >
-                        <span className="text-[15px] shrink-0">
+                        <span className="text-lg shrink-0 text-primary/70">
                           <Icon />
                         </span>
-                        <span className="text-xs font-medium text-text-secondary truncate">
-                          {item.name}
-                        </span>
+                        <span className="text-sm font-medium text-text-secondary">{item.name}</span>
                       </div>
                     );
                   })}
