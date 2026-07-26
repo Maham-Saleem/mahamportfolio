@@ -15,7 +15,7 @@ export const mobileNavLinks = [
   { label: 'About', href: '#about' },
   { label: 'Tech Stack', href: '#tech-stack' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Services', href: '#services' },
+  { label: 'Process', href: '#services' },
   { label: 'Experience', href: '#experience' },
   { label: 'Certifications', href: '#certifications' },
   { label: 'Achievements', href: '#achievements' },
@@ -75,16 +75,6 @@ export const techData: TechCategory[] = [
       { name: 'Packet Tracer', icon: Cpu },
     ],
   },
-];
-
-export const servicesList = [
-  'Responsive Website Development',
-  'Business Websites',
-  'Portfolio Websites',
-  'Landing Pages',
-  'E-commerce Frontend Development',
-  'UI Implementation',
-  'Website Redesign',
 ];
 
 export const educationData = [
