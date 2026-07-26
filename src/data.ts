@@ -165,6 +165,7 @@ export const projectsData: Project[] = [
     github: 'https://github.com/Maham-Saleem/smars',
     demo: 'https://smars-iota.vercel.app/',
     gradient: 'from-emerald-500 to-teal-500',
+    image: '/images/smars.png',
     type: 'featured',
   },
   {
