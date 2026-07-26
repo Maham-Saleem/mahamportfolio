@@ -10,6 +10,7 @@ export const navLinks = [
   { label: 'Services', href: '#services' },
   { label: 'Experience', href: '#experience' },
   { label: 'Certifications', href: '#certifications' },
+  { label: 'Achievements', href: '#achievements' },
   { label: 'GitHub', href: '#github' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -254,6 +255,71 @@ export const projectsData: Project[] = [
 
 export const featuredProjects = projectsData.filter((p) => p.type === 'featured');
 export const additionalProjects = projectsData.filter((p) => p.type === 'additional');
+
+export interface ExperienceItem {
+  title: string;
+  organization: string;
+  period: string;
+  responsibilities: string[];
+  type: 'internship' | 'leadership';
+}
+
+export const experienceData: ExperienceItem[] = [
+  {
+    title: 'Virtual C++ Programming Intern',
+    organization: 'CodeAlpha',
+    period: 'July 2025 – August 2025',
+    responsibilities: [
+      'Built two console-based projects focusing on object-oriented programming and data handling.',
+      'Completed project-based tasks within deadlines in a remote development environment.',
+    ],
+    type: 'internship',
+  },
+  {
+    title: 'AWS Cloud Core Team Member',
+    organization: 'AWS Student Builder Group (CUST)',
+    period: '',
+    responsibilities: [],
+    type: 'leadership',
+  },
+  {
+    title: 'Volunteering Head',
+    organization: 'CAUSE Society (CUST)',
+    period: '',
+    responsibilities: [],
+    type: 'leadership',
+  },
+];
+
+export interface Certification {
+  title: string;
+  issuer: string;
+  year?: string;
+}
+
+export const certificationsData: Certification[] = [
+  { title: '65 Hours Community Service Certificate', issuer: 'PGGA', year: '2026' },
+  { title: 'AWS Cloud Core Team Badge', issuer: 'AWS Student Builder Group (CUST)', year: '2026' },
+  { title: "Chancellor's Honorship Certificate", issuer: 'Capital University of Science and Technology', year: 'Spring 2025' },
+  { title: 'Volunteering Head Certificate', issuer: 'CAUSE Society (CUST)' },
+  { title: 'Deloitte Australia Technology Job Simulation', issuer: 'Forage' },
+  { title: 'CodeAlpha C++ Programming Internship Certificate', issuer: 'CodeAlpha' },
+  { title: "Chancellor's Honorship Certificate", issuer: 'Capital University of Science and Technology', year: 'Fall 2024' },
+  { title: 'Business Analysis and Project Management', issuer: 'Coursera' },
+  { title: 'Web Development with WordPress', issuer: 'Coursera' },
+  { title: 'Use Canva to Design Digital Course Collateral', issuer: 'Coursera' },
+  { title: 'Physics Project Exhibition Certificate', issuer: 'Punjab College' },
+  { title: 'Proctorship Certificate', issuer: 'Punjab College' },
+];
+
+export const achievementsData = [
+  { label: 'CGPA', value: '3.94 / 4.00' },
+  { label: 'AWS Cloud Core Team Member' },
+  { label: 'Volunteering Head – CAUSE Society' },
+  { label: "Multiple Chancellor's Honorship Certificates" },
+  { label: 'CodeAlpha Virtual Internship' },
+  { label: '65 Hours Community Service' },
+];
 
 export const socialLinks = {
   email: 'mahamsaleem951@gmail.com',
