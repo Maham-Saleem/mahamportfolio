@@ -268,26 +268,56 @@ export interface ExperienceItem {
 
 export const experienceData: ExperienceItem[] = [
   {
-    title: 'AWS Cloud Core Team Member',
-    organization: 'AWS Student Builder Group (CUST)',
-    period: '',
-    responsibilities: [],
-    type: 'leadership',
+    title: 'Started Software Engineering at CUST',
+    organization: 'Capital University of Science and Technology',
+    period: '2024',
+    responsibilities: [
+      'Built strong programming fundamentals in C++ and software engineering.',
+    ],
+    type: 'internship',
+  },
+  {
+    title: "Chancellor's Honour Scholarship",
+    organization: 'Capital University of Science and Technology',
+    period: '2024 - 2025',
+    responsibilities: [
+      'Maintained outstanding academic performance (CGPA 3.95 / 4.00).',
+    ],
+    type: 'internship',
   },
   {
     title: 'Volunteering Head',
     organization: 'CAUSE Society (CUST)',
-    period: '',
-    responsibilities: [],
+    period: '2025',
+    responsibilities: [
+      'Organised events and developed leadership and teamwork skills.',
+    ],
     type: 'leadership',
   },
   {
-    title: 'Virtual C++ Programming Intern',
-    organization: 'CodeAlpha',
-    period: 'July 2025 – August 2025',
+    title: 'AWS Student Builder Programme',
+    organization: 'AWS Cloud Core Team',
+    period: '2025',
     responsibilities: [
-      'Built two console-based projects focusing on object-oriented programming and data handling.',
-      'Completed project-based tasks within deadlines in a remote development environment.',
+      'Selected for AWS Cloud Core Team and expanded cloud development knowledge.',
+    ],
+    type: 'leadership',
+  },
+  {
+    title: 'Frontend Development Journey',
+    organization: 'Self-directed',
+    period: '2025 - 2026',
+    responsibilities: [
+      'Built responsive websites using HTML, CSS, JavaScript, React and Tailwind CSS.',
+    ],
+    type: 'internship',
+  },
+  {
+    title: 'Portfolio & Client Projects',
+    organization: 'Freelance',
+    period: '2026',
+    responsibilities: [
+      'Designed and developed multiple responsive business websites and modern web interfaces.',
     ],
     type: 'internship',
   },
