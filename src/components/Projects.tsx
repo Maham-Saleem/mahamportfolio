@@ -176,7 +176,7 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        <div className="mt-16 space-y-8">
+        <div className="mt-16 grid sm:grid-cols-2 gap-6">
           {featuredProjects.map((project, i) => (
             <FeaturedCard key={project.slug} project={project} index={i} inView={inView} />
           ))}
