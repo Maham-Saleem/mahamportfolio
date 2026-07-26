@@ -6,7 +6,7 @@ export const navLinks = [
   { label: 'Home', href: '#hero' },
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
+  { label: 'Achievements', href: '#achievements' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -15,7 +15,7 @@ export const mobileNavLinks = [
   { label: 'About', href: '#about' },
   { label: 'Tech Stack', href: '#tech-stack' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
+  { label: 'Achievements', href: '#achievements' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -191,58 +191,6 @@ export const projectsData: Project[] = [
     demo: 'https://parima-chi.vercel.app/',
     gradient: 'from-purple-500 to-indigo-500',
     image: '/images/parima.png',
-  },
-];
-
-export interface ExperienceItem {
-  title: string;
-  organization: string;
-  period: string;
-  description: string;
-}
-
-export const experienceData: ExperienceItem[] = [
-  {
-    title: 'Started Software Engineering at CUST',
-    organization: 'Capital University of Science and Technology',
-    period: '2024',
-    description: 'Built strong programming fundamentals in C++ and software engineering principles.',
-  },
-  {
-    title: "Chancellor's Honour Scholarship",
-    organization: 'Capital University of Science and Technology',
-    period: '2024 - 2025',
-    description: 'Maintained outstanding academic performance with a CGPA of 3.95 / 4.00.',
-  },
-  {
-    title: 'Volunteering Head',
-    organization: 'CAUSE Society (CUST)',
-    period: '2025',
-    description: 'Organised events and developed leadership and teamwork skills while managing a team of volunteers.',
-  },
-  {
-    title: 'AWS Student Builder Programme',
-    organization: 'AWS Cloud Core Team',
-    period: '2025',
-    description: 'Selected for the AWS Cloud Core Team, gaining hands-on experience with cloud infrastructure and services.',
-  },
-  {
-    title: 'Deloitte Technology Job Simulation',
-    organization: 'Forage',
-    period: '2025',
-    description: 'Completed a simulated technology consulting project focused on client needs, technical analysis, and solution design.',
-  },
-  {
-    title: 'CodeAlpha Internship',
-    organization: 'CodeAlpha',
-    period: '2025',
-    description: 'Built C++ console-based projects applying object-oriented programming, data handling, and project management.',
-  },
-  {
-    title: 'Built Multiple Responsive Web Applications',
-    organization: 'Freelance & Personal Projects',
-    period: '2025 - 2026',
-    description: 'Designed and developed modern web interfaces using React, Tailwind CSS, TypeScript, and responsive design principles.',
   },
 ];
 

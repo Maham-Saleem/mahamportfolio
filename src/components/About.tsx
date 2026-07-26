@@ -1,27 +1,21 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { GraduationCap, Code2, Award } from 'lucide-react';
+import { GraduationCap, Code2 } from 'lucide-react';
 
 const infoCards = [
   {
     icon: GraduationCap,
     title: 'Education',
     items: [
-      { label: 'Software Engineering', sub: 'Capital University of Science & Technology' },
+      { label: 'BSc Software Engineering', sub: 'Capital University of Science & Technology' },
+      { label: 'CGPA 3.95 / 4.00', sub: "Chancellor's Honours Scholar" },
     ],
   },
   {
     icon: Code2,
     title: 'Current Focus',
     items: [
-      { label: 'Frontend Development', sub: 'React \u2022 Tailwind \u2022 Modern UI' },
-    ],
-  },
-  {
-    icon: Award,
-    title: 'Academic Achievement',
-    items: [
-      { label: 'CGPA 3.95 / 4.00', sub: 'Chancellor\'s Honours' },
+      { label: 'Frontend Development', sub: 'React \u2022 TypeScript \u2022 Tailwind CSS' },
     ],
   },
 ];
@@ -30,7 +24,7 @@ export default function About() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="about" className="py-16 md:py-24 relative">
+    <section id="about" className="py-20 md:py-28 relative">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/4 rounded-full blur-3xl" />
       </div>

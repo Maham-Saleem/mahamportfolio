@@ -109,7 +109,7 @@ export default function Projects() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 });
 
   return (
-    <section id="projects" className="py-16 md:py-24 relative">
+    <section id="projects" className="py-20 md:py-28 relative">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-96 h-96 bg-secondary/4 rounded-full blur-3xl" />
       </div>

@@ -14,7 +14,7 @@ export default function TechStack() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="tech-stack" className="py-16 md:py-24 relative">
+    <section id="tech-stack" className="py-20 md:py-28 relative">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/4 rounded-full blur-3xl" />
       </div>

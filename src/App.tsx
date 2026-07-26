@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import TechStack from './components/TechStack';
 import Projects from './components/Projects';
-import Experience from './components/Experience';
+import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
@@ -20,7 +20,7 @@ function HomePage() {
         <About />
         <TechStack />
         <Projects />
-        <Experience />
+        <Achievements />
         <Contact />
       </main>
       <Footer />
