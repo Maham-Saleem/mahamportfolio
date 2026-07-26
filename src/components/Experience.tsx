@@ -1,26 +1,55 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { GraduationCap, Award, Users, Cloud, Briefcase, Code2, Layout, X } from 'lucide-react';
-import { experienceData, featuredCertifications, certificationsData } from '../data';
+import { GraduationCap, Award, Users, X, ArrowUpRight } from 'lucide-react';
+import {
+  experienceData,
+  academicCertifications,
+  professionalCertifications,
+  leadershipCertifications,
+  certificationsData,
+} from '../data';
 
-const icons = [GraduationCap, Award, Users, Cloud, Briefcase, Code2, Layout];
+const categoryMeta = {
+  academic: { icon: GraduationCap, label: 'Academic' },
+  professional: { icon: Award, label: 'Professional' },
+  leadership: { icon: Users, label: 'Leadership & Community' },
+} as const;
 
-const certIcons: Record<string, React.ElementType> = {
-  'Capital University of Science and Technology': GraduationCap,
-  'AWS Student Builder Group (CUST)': Cloud,
-  'Forage': Briefcase,
-  'CodeAlpha': Code2,
-  'CAUSE Society (CUST)': Users,
-  'PGGA': Award,
-};
+const allCertsByCategory = [
+  { key: 'academic', label: 'Academic', icon: GraduationCap, items: academicCertifications },
+  { key: 'professional', label: 'Professional', icon: Award, items: professionalCertifications },
+  { key: 'leadership', label: 'Leadership & Community', icon: Users, items: leadershipCertifications },
+];
 
-function CertCard({ cert }: { cert: typeof featuredCertifications[0] }) {
-  const Icon = certIcons[cert.issuer] || Award;
+const featuredCertsByCategory = allCertsByCategory.map((c) => ({
+  ...c,
+  items: c.items.slice(0, 2),
+}));
+
+function JourneyCard({ item, index }: { item: typeof experienceData[0]; index: number }) {
   return (
-    <div className="flex items-center gap-3 p-3 rounded-xl bg-card border border-border hover:border-primary/15 transition-all duration-300 group">
-      <div className="w-8 h-8 rounded-lg bg-primary/5 text-primary flex items-center justify-center shrink-0 group-hover:gradient-bg group-hover:text-white transition-all duration-300">
-        <Icon size={14} />
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-40px' }}
+      transition={{ duration: 0.3, delay: index * 0.04 }}
+      className="relative pl-6 border-l-2 border-primary/10 last:pb-0 pb-5"
+    >
+      <div className="absolute left-0 top-0.5 w-2.5 h-2.5 rounded-full bg-primary -translate-x-[5.5px]" />
+      <h3 className="text-sm font-bold font-heading">{item.title}</h3>
+      <p className="text-xs text-text-secondary font-medium mt-0.5">{item.organization}</p>
+      <p className="text-xs text-text-secondary/70 mt-1 leading-relaxed">{item.description}</p>
+    </motion.div>
+  );
+}
+
+function CertMiniCard({ cert }: { cert: typeof certificationsData[0] }) {
+  const Icon = categoryMeta[cert.category].icon;
+  return (
+    <div className="flex items-center gap-3 p-2.5 rounded-xl bg-card border border-border hover:border-primary/15 transition-all duration-300 group">
+      <div className="w-7 h-7 rounded-lg bg-primary/5 text-primary flex items-center justify-center shrink-0 group-hover:gradient-bg group-hover:text-white transition-all duration-300">
+        <Icon size={13} />
       </div>
       <div className="min-w-0 flex-1">
         <p className="text-xs font-semibold leading-snug">{cert.title}</p>
@@ -50,64 +79,55 @@ export default function Experience() {
           >
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary">Experience</span>
             <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold font-heading tracking-tight leading-[1.1]">
-              Milestones &{' '}
-              <span className="gradient-text">Growth</span>
+              Journey &{' '}
+              <span className="gradient-text">Achievements</span>
             </h2>
             <p className="mt-4 text-text-secondary leading-relaxed">
-              Key moments that shaped my journey as a developer.
+              My path in software engineering and the milestones along the way.
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-5 gap-8 lg:gap-14 mt-14">
-            <div className="lg:col-span-3 space-y-5">
-              {experienceData.map((item, i) => {
-                const Icon = icons[i] || GraduationCap;
-                return (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 16 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: '-40px' }}
-                    transition={{ duration: 0.35, delay: i * 0.05 }}
-                    className="relative pl-12"
-                  >
-                    <div className="absolute left-0 top-0 w-8 h-8 rounded-full bg-primary/5 border-2 border-primary/20 flex items-center justify-center">
-                      <Icon size={14} className="text-primary" />
-                    </div>
-                    <div className="border-l-2 border-primary/10 pl-5 pb-1">
-                      <span className="inline-block px-2 py-0.5 rounded-md text-[10px] font-semibold bg-primary/10 text-primary mb-1">
-                        {item.period}
-                      </span>
-                      <h3 className="text-sm font-bold font-heading">{item.title}</h3>
-                      <p className="text-xs text-text-secondary mt-0.5">{item.organization}</p>
-                      <p className="text-xs text-text-secondary/70 mt-1 leading-relaxed">{item.description}</p>
-                    </div>
-                  </motion.div>
-                );
-              })}
+          <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 mt-14">
+            <div className="lg:col-span-3">
+              <h3 className="text-sm font-bold font-heading tracking-wide mb-5 flex items-center gap-2">
+                <GraduationCap size={14} className="text-primary" />
+                Journey
+              </h3>
+              <div className="space-y-0">
+                {experienceData.map((item, i) => (
+                  <JourneyCard key={i} item={item} index={i} />
+                ))}
+              </div>
             </div>
 
             <div className="lg:col-span-2">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.25 }}
+              <h3 className="text-sm font-bold font-heading tracking-wide mb-5 flex items-center gap-2">
+                <Award size={14} className="text-primary" />
+                Achievements & Certifications
+              </h3>
+              <div className="space-y-5">
+                {featuredCertsByCategory.map((cat) => (
+                  <div key={cat.key}>
+                    <div className="flex items-center gap-2 mb-2.5">
+                      <cat.icon size={12} className="text-text-secondary" />
+                      <span className="text-xs font-semibold text-text-secondary tracking-wide">{cat.label}</span>
+                    </div>
+                    <div className="space-y-2">
+                      {cat.items.map((cert, i) => (
+                        <CertMiniCard key={`${cert.title}-${i}`} cert={cert} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <button
+                onClick={() => setCertModalOpen(true)}
+                className="mt-4 w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl border border-border text-xs font-medium text-text-secondary hover:text-primary hover:border-primary/20 transition-all duration-300"
               >
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-sm font-bold font-heading">Certifications</h3>
-                  <button
-                    onClick={() => setCertModalOpen(true)}
-                    className="text-xs font-medium text-primary hover:text-secondary transition-colors"
-                  >
-                    View all ({certificationsData.length})
-                  </button>
-                </div>
-                <div className="space-y-2.5">
-                  {featuredCertifications.map((cert, i) => (
-                    <CertCard key={`${cert.title}-${i}`} cert={cert} />
-                  ))}
-                </div>
-              </motion.div>
+                View All Certificates ({certificationsData.length})
+                <ArrowUpRight size={12} />
+              </button>
             </div>
           </div>
         </div>
@@ -132,7 +152,7 @@ export default function Experience() {
             >
               <div className="sticky top-0 z-10 flex items-center justify-between p-4 border-b border-border bg-card">
                 <div>
-                  <h3 className="text-base font-bold font-heading">All Certifications</h3>
+                  <h3 className="text-base font-bold font-heading">All Certificates</h3>
                   <p className="text-xs text-text-secondary mt-0.5">{certificationsData.length} credentials</p>
                 </div>
                 <button
@@ -142,24 +162,21 @@ export default function Experience() {
                   <X size={14} />
                 </button>
               </div>
-              <div className="p-4 space-y-2.5">
-                {certificationsData.map((cert, i) => {
-                  const Icon = certIcons[cert.issuer] || Award;
-                  return (
-                    <div
-                      key={`${cert.title}-${i}`}
-                      className="flex items-center gap-3 p-3 rounded-xl bg-card border border-border hover:border-primary/15 transition-colors"
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-primary/5 text-primary flex items-center justify-center shrink-0">
-                        <Icon size={14} />
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <p className="text-xs font-semibold leading-snug">{cert.title}</p>
-                        <p className="text-[11px] text-text-secondary mt-0.5">{cert.issuer}</p>
-                      </div>
+              <div className="p-4 space-y-5">
+                {allCertsByCategory.map((cat) => (
+                  <div key={cat.key}>
+                    <div className="flex items-center gap-2 mb-2.5">
+                      <cat.icon size={13} className="text-primary" />
+                      <span className="text-xs font-bold text-primary tracking-wide">{cat.label}</span>
+                      <span className="text-[11px] text-text-secondary ml-auto">{cat.items.length} items</span>
                     </div>
-                  );
-                })}
+                    <div className="space-y-2">
+                      {cat.items.map((cert, i) => (
+                        <CertMiniCard key={`${cert.title}-${i}`} cert={cert} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </motion.div>
           </motion.div>

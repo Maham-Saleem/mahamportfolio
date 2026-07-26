@@ -250,24 +250,27 @@ export interface Certification {
   title: string;
   issuer: string;
   year?: string;
+  category: 'academic' | 'professional' | 'leadership';
 }
 
 export const certificationsData: Certification[] = [
-  { title: "Chancellor's Honorship Certificate", issuer: 'Capital University of Science and Technology', year: 'Spring 2025' },
-  { title: 'AWS Cloud Core Team Badge', issuer: 'AWS Student Builder Group (CUST)', year: '2026' },
-  { title: 'Deloitte Australia Technology Job Simulation', issuer: 'Forage' },
-  { title: 'CodeAlpha C++ Programming Internship Certificate', issuer: 'CodeAlpha' },
-  { title: 'Volunteering Head Certificate', issuer: 'CAUSE Society (CUST)' },
-  { title: '65 Hours Community Service Certificate', issuer: 'PGGA', year: '2026' },
-  { title: "Chancellor's Honorship Certificate", issuer: 'Capital University of Science and Technology', year: 'Fall 2024' },
-  { title: 'Business Analysis and Project Management', issuer: 'Coursera' },
-  { title: 'Web Development with WordPress', issuer: 'Coursera' },
-  { title: 'Use Canva to Design Digital Course Collateral', issuer: 'Coursera' },
-  { title: 'Physics Project Exhibition Certificate', issuer: 'Punjab College' },
-  { title: 'Proctorship Certificate', issuer: 'Punjab College' },
+  { title: "Chancellor's Honorship Certificate", issuer: 'Capital University of Science and Technology', year: 'Spring 2025', category: 'academic' },
+  { title: "Chancellor's Honorship Certificate", issuer: 'Capital University of Science and Technology', year: 'Fall 2024', category: 'academic' },
+  { title: 'Physics Project Exhibition Certificate', issuer: 'Punjab College', category: 'academic' },
+  { title: 'Proctorship Certificate', issuer: 'Punjab College', category: 'academic' },
+  { title: 'AWS Cloud Core Team Badge', issuer: 'AWS Student Builder Group (CUST)', year: '2026', category: 'professional' },
+  { title: 'Deloitte Australia Technology Job Simulation', issuer: 'Forage', category: 'professional' },
+  { title: 'CodeAlpha C++ Programming Internship Certificate', issuer: 'CodeAlpha', category: 'professional' },
+  { title: 'Business Analysis and Project Management', issuer: 'Coursera', category: 'professional' },
+  { title: 'Web Development with WordPress', issuer: 'Coursera', category: 'professional' },
+  { title: 'Use Canva to Design Digital Course Collateral', issuer: 'Coursera', category: 'professional' },
+  { title: 'Volunteering Head Certificate', issuer: 'CAUSE Society (CUST)', category: 'leadership' },
+  { title: '65 Hours Community Service Certificate', issuer: 'PGGA', year: '2026', category: 'leadership' },
 ];
 
-export const featuredCertifications = certificationsData.slice(0, 6);
+export const academicCertifications = certificationsData.filter(c => c.category === 'academic');
+export const professionalCertifications = certificationsData.filter(c => c.category === 'professional');
+export const leadershipCertifications = certificationsData.filter(c => c.category === 'leadership');
 
 export const socialLinks = {
   email: 'mahamsaleem951@gmail.com',
