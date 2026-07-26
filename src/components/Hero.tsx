@@ -98,11 +98,11 @@ export default function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.24 }}
-              className="mt-8 flex flex-wrap gap-3"
+              className="mt-8 flex flex-wrap gap-3 justify-center sm:justify-start"
             >
               <button
                 onClick={() => scrollTo('#projects')}
-                className="group flex-1 px-6 py-3.5 gradient-bg text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2"
+                className="group px-8 py-3.5 gradient-bg text-white rounded-full font-medium shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 w-[160px] justify-center"
               >
                 View Projects
                 <ArrowDown size={16} className="group-hover:translate-y-0.5 transition-transform" />
@@ -110,14 +110,14 @@ export default function Hero() {
               <a
                 href="/Maham_Saleem_CV.pdf"
                 download
-                className="flex-1 px-6 py-3.5 rounded-full font-medium border-2 border-border text-text-secondary hover:border-primary/30 hover:text-primary hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2"
+                className="px-8 py-3.5 rounded-full font-medium border-2 border-border text-text-secondary hover:border-primary/30 hover:text-primary hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 w-[160px] justify-center"
               >
                 <Download size={16} />
                 Download CV
               </a>
               <button
                 onClick={() => scrollTo('#contact')}
-                className="flex-1 px-6 py-3.5 rounded-full font-medium border-2 border-border text-text-secondary hover:border-primary/30 hover:text-primary hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2"
+                className="px-8 py-3.5 rounded-full font-medium border-2 border-border text-text-secondary hover:border-primary/30 hover:text-primary hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 w-[160px] justify-center"
               >
                 <Mail size={16} />
                 Contact
