@@ -5,13 +5,20 @@ import { Cpu, Database, Pen, Code2 } from 'lucide-react';
 export const navLinks = [
   { label: 'Home', href: '#hero' },
   { label: 'About', href: '#about' },
-  { label: 'Tech Stack', href: '#tech-stack' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Contact', href: '#contact' },
+];
+
+export const mobileNavLinks = [
+  { label: 'Home', href: '#hero' },
+  { label: 'About', href: '#about' },
+  { label: 'Tech Stack', href: '#about' },
   { label: 'Projects', href: '#projects' },
   { label: 'Services', href: '#services' },
   { label: 'Experience', href: '#experience' },
-  { label: 'Certifications', href: '#certifications' },
-  { label: 'Achievements', href: '#achievements' },
-  { label: 'GitHub', href: '#github' },
+  { label: 'Certifications', href: '#experience' },
+  { label: 'Achievements', href: '#experience' },
   { label: 'Contact', href: '#contact' },
 ];
 
