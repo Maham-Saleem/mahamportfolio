@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Services from './components/Services';
 import Experience from './components/Experience';
 import Certifications from './components/Certifications';
+import Achievements from './components/Achievements';
 import Education from './components/Education';
 import GithubStats from './components/GithubStats';
 import Contact from './components/Contact';
@@ -26,6 +27,7 @@ function HomePage() {
         <Services />
         <Experience />
         <Certifications />
+        <Achievements />
         <Education />
         <GithubStats />
         <Contact />
